@@ -1,6 +1,4 @@
 import React from "react";
-import { BsDashLg } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 interface PageTitleProps {
   title: string;

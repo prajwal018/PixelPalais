@@ -1,5 +1,3 @@
-import React from "react";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { toast } from "react-toastify";
 
 const HelloPrompter = () => {

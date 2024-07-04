@@ -1,8 +1,8 @@
-import DigitalMe from "../components/digitalMe";
-import AboutMe from "../components/aboutMe";
-import HelloPrompter from "../components/helloPrompter";
-import HeroBoard from "../components/heroBoard";
-import ServiceCard, { ServiceCardProps } from "../components/serviceCard";
+import DigitalMe from "../components/digitalMe.tsx";
+import AboutMe from "../components/aboutMe.tsx";
+import HelloPrompter from "../components/helloPrompter.tsx";
+import HeroBoard from "../components/heroBoard.tsx";
+import ServiceCard, { ServiceCardProps } from "../components/serviceCard.tsx";
 
 import React from "react";
 const Services: ServiceCardProps[] = [

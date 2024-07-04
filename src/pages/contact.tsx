@@ -3,7 +3,7 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 // import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
-import PageTitle from "../components/page_title";
+import PageTitle from "../components/page_title.tsx";
 
 import { BsEnvelopeFill, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
 

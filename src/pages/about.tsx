@@ -8,8 +8,8 @@ import {
   CRow,
 } from "@coreui/react";
 import { BsChevronRight } from "react-icons/bs";
-import Flip from "../components/flip";
-import PageTitle from "../components/page_title";
+import Flip from "../components/flip.tsx";
+import PageTitle from "../components/page_title.tsx";
 
 const About: React.FC = () => {
   return (

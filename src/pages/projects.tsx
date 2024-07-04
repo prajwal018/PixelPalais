@@ -1,5 +1,5 @@
 import React from "react";
-import PageTitle from "../components/page_title";
+import PageTitle from "../components/page_title.tsx";
 
 const projects = [
   {
