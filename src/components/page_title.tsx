@@ -8,20 +8,9 @@ interface PageTitleProps {
 
 const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
   return (
-    <section id="page-title" style={{ color: "#000" }}>
-      <h1>{title.toUpperCase()}</h1>
-      <ul className="list-nav">
-        <Link to="/home">
-          <h6>Home</h6>
-        </Link>
-        <h4 style={{ padding: "10px" }}>
-          <BsDashLg />
-        </h4>
-        <Link to={`/${title.toLowerCase()}`}>
-          <h6>{title}</h6>
-        </Link>
-      </ul>
-    </section>
+    <div className="bg-gray-200 m-4 rounded-lg text-center">
+      <div className="text-4xl font-bold">{title.toUpperCase()}</div>
+    </div>
   );
 };
 

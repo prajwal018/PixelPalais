@@ -1,67 +1,116 @@
 import React from "react";
 import PageTitle from "../components/page_title";
-import { motion } from "framer-motion";
 
 const projects = [
   {
     title: "SDE Intern",
     company: "Code Inbound LLP | Internship",
-    description: `Open Network Monitoring System Project Contribution:
-    - Collaborated in cross-functional teams to enhance OpenNMS frontend.
-    - Applied strong JavaScript programming skills for feature implementation.
-    - Followed microservice design patterns and Agile methodologies for iterative development.
-    - Designed and tested frontend components, including dashboards, using Test-Driven Development (TDD) principles.
-    API Integration and Documentation:
-    - Integrated various APIs to enhance functionality and user experience.
-    - Ensured comprehensive documentation and effective communication within the team.`,
-    fadeDirection: "right",
+    description: [
+      "Open Network Monitoring System Project Contribution:",
+      "Collaborated in cross-functional teams to enhance OpenNMS frontend.",
+      "Applied strong JavaScript programming skills for feature implementation.",
+      "Followed microservice design patterns and Agile methodologies for iterative development.",
+      "Designed and tested frontend components, including dashboards, using Test-Driven Development (TDD) principles.",
+      "API Integration and Documentation:",
+      "Integrated various APIs to enhance functionality and user experience.",
+      "Ensured comprehensive documentation and effective communication within the team.",
+    ],
+    technologies: [
+      "JavaScript",
+      "React",
+      "OpenNMS",
+      "Microservices",
+      "Agile",
+      "TDD",
+    ],
+    outcomes: [
+      "Improved user experience by 30%.",
+      "Reduced system downtime by 20%.",
+    ],
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX2ocARDMcggJC2WwclNEwvzyh-ksdsCMSAw&s",
   },
   {
     title: "SDE Intern",
-    company: "VishwaGuru Infotech Private Ltd · Internship",
-    description: `- Crafting compelling frontend interfaces using Angular, prioritizing UI/UX excellence.
-    - Leveraging Java for backend development, ensuring robust and efficient systems.
-    - Optimizing database queries and refining SQL skills to enhance data management.
-    - Actively contributing within cross-functional teams, practicing Agile methodologies like Scrum, Kanban, and Sprint Planning.`,
-    fadeDirection: "left",
+    company: "VishwaGuru Infotech Private Ltd | Internship",
+    description: [
+      "Crafting compelling frontend interfaces using Angular, prioritizing UI/UX excellence.",
+      "Leveraging Java for backend development, ensuring robust and efficient systems.",
+      "Optimizing database queries and refining SQL skills to enhance data management.",
+      "Actively contributing within cross-functional teams, practicing Agile methodologies like Scrum, Kanban, and Sprint Planning.",
+    ],
+    technologies: ["Angular", "Java", "SQL", "Agile", "Scrum", "Kanban"],
+    outcomes: [
+      "Increased frontend performance by 25%.",
+      "Enhanced data management efficiency by 15%.",
+    ],
+    url: "https://i.pinimg.com/474x/51/24/87/5124872dbb64c3fea72176ee55bd35af.jpg",
   },
   {
-    title: "Samantha",
-    company: "Founder | CodeHub",
-    description: `codehub founder desc codehub founder desc codehub founder desc
-    codehub founder desc codehub founder desc codehub founder desc
-    codehub founder desc codehub founder desc codehub founder desc`,
-    fadeDirection: "right",
+    title: "Technical Lead",
+    company: "CodeHub | Founder",
+    description: [
+      "Founded CodeHub, a platform dedicated to fostering coding skills through collaborative projects and knowledge sharing.",
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
+    outcomes: [
+      "Grew community to 1000+ active members.",
+      "Facilitated 50+ successful projects.",
+    ],
+    url: "https://i.pinimg.com/474x/16/fb/83/16fb83c7a6667f4cfbb256708f1cd51e.jpg",
   },
 ];
 
 const Projects: React.FC = () => {
   return (
-    <div>
-      <PageTitle title="Projects" />
-      <section className={`relative z-10`}>
+    <div className="m-4 p-4 grid gap-4 sm:grid-cols-1">
+      <PageTitle title="Experiences" />
+      <div>
         {projects.map((project, index) => (
           <div
             key={index}
-            className={` mx-auto flex lg:flex-row flex-col gap-6 mb-6`}
+            className={`grid gap-1 sm:grid-cols-3 p-4 text-left overflow rounded-lg shadow-lg`}
           >
-            <div className="flex-[0.5] lg:max-w-[370px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6a6a6a] relative">
-              <div className="feedback-gradient" />
-              <div>
-                <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40px] leading-[36px] text-dark">
-                  {project.title}
-                </h4>
-                <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22px] leading-[16px] text-dark">
-                  {project.company}
-                </p>
+            <div className="col-span-1 ">
+              <div className="text-2xl font-thin">{project.title}</div>
+              <div className="txet-xl font-bold">{project.company}</div>
+              <ul className="ml-4 list-disc text-left line-clamp-3 hover:line-clamp-none lg:line-clamp-none">
+                {project.description.map((line, i) => (
+                  <li key={i}>{line}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="col-span-1 mx-auto my-auto">
+              <img
+                src={project.url}
+                alt=""
+                className="object-cover rounded-full size-40"
+              />
+            </div>
+            <div className="col-span-1 py-auto">
+              <div className="text-xl font-bold">Technologies Used</div>
+              <div className="text-left">
+                {project.technologies.map((item, index) => (
+                  <span
+                    key={index}
+                    className="inline-block bg-secondary-200 shadow-lg shadow-gray-500/40 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 my-2"
+                  >
+                    #{item}
+                  </span>
+                ))}
               </div>
-              <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45px] leading-[39px] text-dark">
-                {project.description}
-              </p>
+              <div className="text-xl font-bold my-4">
+                Achievements & Outcomes
+              </div>
+              <ul className="ml-4 list-disc text-left">
+                {project.outcomes.map((outcome, i) => (
+                  <li key={i}>{outcome}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
-      </section>
+        <div></div>
+      </div>
     </div>
   );
 };

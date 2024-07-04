@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
             About
           </Link>
           <Link
-            to="/project"
+            to="/projects"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400"
           >
             Projects

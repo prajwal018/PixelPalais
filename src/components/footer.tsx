@@ -4,52 +4,60 @@ import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
-    <footer>
-      <section id="footer">
-        <h2>Let's Talk!</h2>
-        <div className="myinfo">
-          <div className="contact-info">
-            <h5>
+    <>
+      <div className="bg-primary-200 rounded-lg m-8 p-4">
+        <div className="text-3xl font-bold text-center">Let's Talk!</div>
+        <div className="m-4 grid gap-12 sm:grid-cols-3 text-center item-center">
+          <div className="grid grid-cols-1 text-center">
+            <div className="flex justify-center">
               <BsTelephoneFill />
-              <br />
-              Phone Me: <br />
-              <div className="small">+91 876 681 3856</div>
-            </h5>
+            </div>
+            <p className="font-semibold">Phone Me:</p>
+            <p className="font-thin">+91 876 681 3856</p>
           </div>
-          <div className="contact-info">
-            <h5>
+          <div className="grid grid-cols-1">
+            <div className="flex justify-center">
               <BsEnvelopeFill />
-              <br />
-              Email Me: <br />
-              <div className="small">prajwalkuchewar3@gmail.com</div>
-            </h5>
+            </div>
+            <div className="font-semibold">Email Me:</div>
+            <div className="font-thin">
+              <a
+                href="mailto:prajwalkuchewar3@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                prajwalkuchewar3@gmail.com
+              </a>
+            </div>
           </div>
-          <div className="contact-info">
-            <h5>
+          <div className="grid grid-cols-1">
+            <div className="flex justify-center">
               <BsLink />
-              <br />
-              Follow Me: <br />
-              <div className="small">
-                <a
-                  href="https://linkedin.com/in/prajwal018"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  linkedin.com/in/prajwal018
-                </a>
-              </div>
-            </h5>
+            </div>
+            <div className="font-semibold">Follow Me:</div>
+            <div className="font-thin">
+              <a
+                href="https://linkedin.com/in/prajwal018"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                linkedin.com/in/prajwal018
+              </a>
+            </div>
           </div>
         </div>
-        <br />
-        <Link to="/contact">
-          <button className="button">Hire Me</button>
-        </Link>
-      </section>
-      <div className="copyright">
+        <a className="flex justify-center mx-auto" href="/contact">
+          <Link to="/contact">
+            <button className="item-center rounded-full py-2 px-4 text-primary-200 bg-primary-800 shadow-lg shadow-gray-800/40 ">
+              Hire Me
+            </button>
+          </Link>
+        </a>
+      </div>
+      <div className="flex justify-end mx-auto">
         <p>&copy; 2023 Prajwal Inc.</p>
       </div>
-    </footer>
+    </>
   );
 };
 

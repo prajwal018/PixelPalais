@@ -10,14 +10,14 @@ import Projects from "./pages/projects";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <Router>
       <ToastContainer />
 
-      <div className="bg-emerald-500/40">
-        <Navbar />
-        {/* <div> */}
+      {/* <div className="bg-primary-100"> */}
+      <Navbar />
+      <div>
         <main>
           <Routes>
             <Route path="/about" element={<About />} />
@@ -31,5 +31,3 @@ const App: React.FC = () => {
     </Router>
   );
 };
-
-export default App;
