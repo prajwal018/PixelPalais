@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         <HeroBoard />
         <HelloPrompter />
       </div>
-      <div className="m-4 grid gap-4 sm:grid-cols-3">
+      <div className="m-4 my-16 grid gap-8 sm:grid-cols-3">
         {Services.map((item) => (
           <ServiceCard title={item.title} text={item.text} link={item.link} />
         ))}

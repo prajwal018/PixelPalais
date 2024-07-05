@@ -8,7 +8,7 @@ export default {
     colors: {
       primary: colors.gray, // Equivalent to gray-200
       secondary: colors.emerald, // Equivalent to gray
-      accent: colors.emerald, // Equivalent to emerald
+      accent: colors.indigo, // Equivalent to emerald
       ...colors,
     },
   },

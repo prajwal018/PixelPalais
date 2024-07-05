@@ -58,6 +58,10 @@ const HeroBoard: React.FC = () => {
         className="object-cover rounded-lg absolute bottom-6 right-72 w-56 h-36"
         src="https://i.pinimg.com/474x/42/40/a5/4240a5e7104dfee6cd8342ba0a67d209.jpg"
       />
+      <img
+        className="object-cover rounded-lg absolute -top-12 right-60 pb-2 size-24"
+        src="src\assets\garfield.png"
+      />
       <Transition show={open}>
         <img
           src="https://i.pinimg.com/474x/86/15/62/861562e1dbfeaaa9816f7a2aa0932917.jpg"

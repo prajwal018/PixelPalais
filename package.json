@@ -31,6 +31,7 @@
     "react-card-flip": "^1.2.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.7.1",
+    "react-leetcode": "^1.0.3",
     "react-lite-yt-embed": "^1.2.7",
     "react-toastify": "^9.1.3",
     "reactstrap": "^9.1.6",

@@ -1,57 +1,39 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-
-const Flip: React.FC = () => {
+export interface FlipProps {
+  title: string;
+  description: string;
+  name: string;
+  profession: string;
+}
+const Flip: React.FC<FlipProps> = ({
+  title,
+  description,
+  name,
+  profession,
+}) => {
   const [flip, setFlip] = useState(false);
 
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
-      <div className="react-card-front">
-        <div
-          className="flip-switch"
-          onClick={() => setFlip(!flip)}
-          style={{
-            borderRadius: "100px",
-            backgroundColor: "#eee",
-            width: "15rem",
-            height: "15rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-          }}
-        >
-          {/* Optional: Add an icon or text here */}
-          <span>Flip Me</span>
-        </div>
+      <div
+        className="bg-primary-200 cursor-pointer relative h-80 w-60"
+        onClick={() => setFlip(!flip)}
+      >
+        <img
+          className="object-cover h-80 w-60 rounded-lg"
+          src="https://i.pinimg.com/474x/e0/51/3d/e0513dfbe1eee5a02210b9b48b2887fd.jpg"
+        />
       </div>
       <div
-        className="react-card-back"
+        className="h-80 w-60 rounded-lg bg-primary-200 cursor-pointer"
         onClick={() => setFlip(!flip)}
-        style={{
-          borderRadius: "100px",
-          backgroundColor: "#eee",
-          width: "15rem",
-          height: "15rem",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "pointer",
-        }}
       >
-        <div className="card-body">
-          <h4 className="card-title">Client Testimonials</h4>
-          <p
-            className="card-text"
-            style={{ overflow: "hidden", textAlign: "center" }}
-          >
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content. Some quick example text to build on the
-            card title and make up the bulk of the card's content.
-          </p>
-          <h5 className="card-subtitle mb-2 text-muted">Ronald Green</h5>
-          <h6 className="card-subtitle mb-2 text-muted">UX Designer</h6>
+        <div className="text-center p-4">
+          <h4 className="font-bold text-xl mb-2">{title}</h4>
+          <p className="text-gray-700 text-base mb-2">{description}</p>
+          <div className="font-semibold text-l">{name}</div>
+          <div className="font-normal text-l mb-2">{profession}</div>
         </div>
       </div>
     </ReactCardFlip>

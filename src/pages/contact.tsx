@@ -1,129 +1,130 @@
 /* eslint-disable react/style-prop-object */
 
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { useState } from "react";
 // import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import PageTitle from "../components/page_title.tsx";
 
-import { BsEnvelopeFill, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
-
 const Contact: React.FC = () => {
   // const history = useHistory();
-  const [user, setUser] = useState<{
-    name: string;
-    email: string;
-    message: string;
-  }>({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [status, setStatus] = useState("");
 
-  const handleInputs = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setUser((prevUser) => ({ ...prevUser, [name]: value }));
-  };
-
-  const PostData = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const { name, email, message } = user;
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const data = new FormData(form);
 
     try {
-      const res = await fetch("/contact", {
+      const response = await fetch("https://formspree.io/f/xanwyljo", {
         method: "POST",
+        body: data,
         headers: {
-          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify({ name, email, message }),
       });
 
-      const data = await res.json();
-
-      if (res.status === 422 || !data) {
-        toast.error("Invalid Inputs");
-      } else {
+      if (response.ok) {
         toast.info("Message Sent");
-        setUser({ name: "", email: "", message: "" });
-        // history.push("/contact");
+
+        setStatus("Thank you for your message!");
+        form.reset();
+      } else {
+        toast.error("An error occurred. Please try again.");
+
+        setStatus("Oops! There was a problem submitting your form.");
       }
     } catch (error) {
       toast.error("An error occurred. Please try again.");
+
+      setStatus("Oops! There was a problem submitting your form.");
     }
   };
 
   return (
-    <div>
-      <div id="contact">
-        <PageTitle title="Contact" />
-        <div className="content-wrap">
-          <section id="quick-support">
-            <h2>Quick Support</h2>
-            <p style={{ marginBottom: 0 }}>
-              These are the words we live by in everything we do. Every story we
-              tell, every brand <br />
-              we build, and every interaction we create
-            </p>
-            <div className="myinfo">
-              <h5>
-                <BsTelephoneFill />
-                Phone Me 24/7: <br />
-                <div className="small">+918 766 813 856</div>
-              </h5>
-              <h5>
-                <BsEnvelopeFill />
-                Email Me 24/7: <br />
-                <div className="small">prajwalkuchewar3@gmail.com</div>
-              </h5>
-              <h5>
-                <BsLinkedin />
-                Follow Me: <br />
-                <div className="small">linkedin.com/in/prajwal018</div>
-              </h5>
+    <>
+      <PageTitle title="Contact" />
+      <div id="contact" className="m-4">
+        <div id="Info">
+          <div className="font-bold text-2xl mx-auto text-center">
+            Quick Support
+          </div>
+          <div className="text-xl font-normal text-center p-2">
+            These are the words we live by in everything we do. Every story we
+            tell, every brand <br />
+            we build, and every interaction we create
+          </div>
+
+          <div className="font-bold text-2xl mx-auto text-center">
+            Get in Touch
+          </div>
+          <div className="text-xl font-normal text-center p-2">
+            These are the words we live by in everything we do. Every story we
+            tell, every brand <br />
+            we build, and every interaction we create
+          </div>
+        </div>
+        <div id="comment" className="m-4 grid gap-4 sm:grid-cols-2">
+          <div className="mx-auto">
+            <div className="p-4 font-bold text-2xl text-center">
+              Poster for the Day !
             </div>
-          </section>
-          <section id="comment">
-            <h2>Get in Touch</h2>
-            <form method="POST" onSubmit={PostData}>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Name"
-                value={user.name}
-                onChange={handleInputs}
-              />
-              <br />
-              <br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Email"
-                value={user.email}
-                onChange={handleInputs}
-              />
-              <br />
-              <br />
-              <textarea
-                id="message"
-                name="message"
-                required
-                placeholder="Message"
-                value={user.message}
-                onChange={handleInputs}
-              ></textarea>
-              <br />
-              <br />
-              <input type="submit" value="Leave a comment" />
+            <img
+              className="object-scale-down h-auto w-96 p-4 bg-gray-900"
+              src="https://i.pinimg.com/474x/5e/4b/ea/5e4beaa17a95280f5cfbb0963632b81b.jpg"
+            />
+          </div>
+          <div className="my-12 sm:cols-span-1">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4 relative pb-4">
+                <div className="font-black text-7xl sm:text-9xl opacity-25">
+                  Name
+                </div>
+                <input
+                  className="absolute inset-x-0 bottom-0 text-primary-800 opacity-50 rounded-full border-2 border-primary-600 p-2"
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div className="mb-4 relative pb-4">
+                <div className="font-black text-7xl sm:text-9xl opacity-25">
+                  Email
+                </div>
+                <input
+                  className="absolute text-primary-800 inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-2"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+              <div className="mb-8 pb-12 relative">
+                <div className="font-black text-7xl sm:text-9xl opacity-25">
+                  Message
+                </div>
+                <textarea
+                  className="absolute text-primary-800 inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-4"
+                  name="message"
+                  id="message"
+                  rows={2}
+                  required
+                ></textarea>
+              </div>
+              <div className="flex items-center justify-between">
+                <button
+                  className="item-center w-full rounded-full p-4 text-primary-200 bg-primary-800 shadow-lg shadow-gray-800/40 "
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
+              {status && <p className="mt-4 text-sm text-gray-600">{status}</p>}
             </form>
-          </section>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
