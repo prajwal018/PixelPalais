@@ -60,7 +60,7 @@ const HeroBoard: React.FC = () => {
       />
       <img
         className="object-cover rounded-lg absolute -top-12 right-60 pb-2 size-24"
-        src="src\assets\garfield.png"
+        src={`./garfield.png`}
       />
       <Transition show={open}>
         <img
