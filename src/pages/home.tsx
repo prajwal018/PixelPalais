@@ -1,6 +1,5 @@
 import DigitalMe from "../components/digitalMe.tsx";
 import AboutMe from "../components/aboutMe.tsx";
-import HelloPrompter from "../components/helloPrompter.tsx";
 import HeroBoard from "../components/heroBoard.tsx";
 import ServiceCard, { ServiceCardProps } from "../components/serviceCard.tsx";
 
@@ -26,9 +25,8 @@ const Services: ServiceCardProps[] = [
 const Home: React.FC = () => {
   return (
     <>
-      <div className="m-4 rounded-lg relative h-80 w-2/3 my-8 mx-auto bg-primary-300  back">
+      <div className="m-4 md:mx-auto rounded-lg relative p-2 md:h-80 md:w-2/3 bg-stone-800 md:bg-primary-300 md:back">
         <HeroBoard />
-        <HelloPrompter />
       </div>
       <div className="m-4 my-16 grid gap-8 sm:grid-cols-3">
         {Services.map((item) => (

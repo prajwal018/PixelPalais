@@ -9,15 +9,19 @@ const DigitalMe: React.FC = () => {
         <div className="p-4 w-full my-auto ">
           <LiteYoutubeEmbed id="Y2jyjfcp1as" />
         </div>
-        <div className="border-4 rounded-full bg-primary-200 text-right p-4">
+        <div className="border-4 sm:rounded-full bg-primary-200 col-span-1 p-4">
           <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
           <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
           <p className=" text-l mb-8">
             Proactive student eager to contribute to the coding community
-            through hard work and dedication to quality.
+            through hard work and dedication to quality. Seeking to use
+            exceptional communication skills as a team member/software
+            developer. Proficiency in Python, Java, Data Structures, and
+            Algorithms. Passionate about web development and user experience
+            design.
           </p>
-          <div className="text-left mb-2">You Can Follow Me Here:</div>
-          <div className="flex gap-2 justify-start">
+          <p className=" text-right mb-2">You Can Follow Me Here:</p>
+          <div className="flex gap-2 justify-end">
             <button
               onClick={() =>
                 window.open(
