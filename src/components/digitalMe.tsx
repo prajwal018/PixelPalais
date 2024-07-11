@@ -1,5 +1,6 @@
 import React from "react";
 import { BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si";
 import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 
 const DigitalMe: React.FC = () => {
@@ -7,21 +8,33 @@ const DigitalMe: React.FC = () => {
     <>
       <div className="p-4 grid gap-4 sm:grid-cols-2">
         <div className="p-4 w-full my-auto ">
-          <LiteYoutubeEmbed id="Y2jyjfcp1as" />
+          <LiteYoutubeEmbed id="iCvmsMzlF7o" />
         </div>
         <div className="border-4 sm:rounded-full bg-primary-200 col-span-1 p-4">
-          <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
-          <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
+          <h3 className="font-bold text-2xl ">Favourite TED Talk</h3>
+          <h3 className="font-semibold text-xl mb-4">
+            The power of vulnerability - by Brené Brown
+          </h3>
           <p className=" text-l mb-8">
-            Proactive student eager to contribute to the coding community
-            through hard work and dedication to quality. Seeking to use
-            exceptional communication skills as a team member/software
-            developer. Proficiency in Python, Java, Data Structures, and
-            Algorithms. Passionate about web development and user experience
-            design.
+            Her insightful exploration of human connection through the lens of
+            vulnerability deeply resonates with me. Brown’s talk emphasizes the
+            importance of embracing our imperfections and fostering genuine
+            relationships, which inspires me both personally and professionally
+            to lead with empathy and authenticity.
           </p>
           <p className=" text-right mb-2">You Can Follow Me Here:</p>
           <div className="flex gap-2 justify-end">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://leetcode.com/u/prajwal018/",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              <SiLeetcode className="size-12 p-2" />
+            </button>
             <button
               onClick={() =>
                 window.open(

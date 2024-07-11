@@ -105,7 +105,7 @@ const HeroBoard: React.FC = () => {
           />
         </div>
 
-        <div className=" text-wrap md:text-balance sm:truncate text-primary-200 font-thin rounded-lg p-2">
+        <div className="text-wrap md:text-balance sm:truncate text-primary-200 font-thin rounded-lg p-2">
           Proactive student eager to contribute to the coding community through
           hard work and dedication to quality.
         </div>
@@ -126,7 +126,7 @@ const HeroBoard: React.FC = () => {
         </div>
         <img
           src="https://i.pinimg.com/474x/f3/bd/45/f3bd45f6d915b011bc29f6661a73bac9.jpg"
-          className="h-32 w-full rounded-lg mt-2"
+          className="w-full rounded-lg mt-2"
         />
       </div>
     </>

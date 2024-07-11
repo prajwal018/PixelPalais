@@ -1,5 +1,6 @@
 import React from "react";
 import { BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si";
 
 const AboutMe: React.FC = () => {
   return (
@@ -8,14 +9,26 @@ const AboutMe: React.FC = () => {
         <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
         <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
         <p className=" text-l mb-8">
-          Proactive student eager to contribute to the coding community through
-          hard work and dedication to quality. Seeking to use exceptional
-          communication skills as a team member/software developer. Proficiency
-          in Python, Java, Data Structures, and Algorithms. Passionate about web
-          development and user experience design.
+          Hello! I'm Prajwal Kuchewar, a passionate software developer with
+          expertise in multiple programming languages and frameworks. I thrive
+          on turning ideas into reality through innovative and efficient
+          solutions. With a strong foundation in computer science, I have honed
+          my skills in creating impactful projects and collaborating with
+          cross-functional teams.
         </p>
         <p className=" text-right mb-2">You Can Follow Me Here:</p>
         <div className="flex gap-2 justify-end">
+          <button
+            onClick={() =>
+              window.open(
+                "https://leetcode.com/u/prajwal018/",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
+            <SiLeetcode className="size-12 p-2" />
+          </button>
           <button
             onClick={() =>
               window.open(

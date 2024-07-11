@@ -57,6 +57,12 @@ const Navbar = () => {
             About
           </Link>
           <Link
+            to="/experience"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400 mr-4"
+          >
+            Experience
+          </Link>
+          <Link
             to="/projects"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400"
           >

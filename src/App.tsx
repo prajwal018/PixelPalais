@@ -8,6 +8,7 @@ import Projects from "./pages/projects.tsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import Experience from "./pages/experience.tsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/about" element={<About />} />
+              <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
