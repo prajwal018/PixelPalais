@@ -29,10 +29,10 @@ const projects = [
 const Projects: React.FC = () => {
   return (
     <>
-      <div className="m-4 p-4 grid gap-4 sm:grid-cols-1">
+      <div>
         <PageTitle title="Projects" />
 
-        <div className="m-4 grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+        <div className="m-4 p-4 grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           {projects.map((project) => (
             <ProjectWindow
               title={project.title}

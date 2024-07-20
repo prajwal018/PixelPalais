@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="flex items-right justify-between flex-wrap bg-transparent text-gray-800 p-3">
       <div className="flex items-center flex-shrink-0 mr-6">
-        <span className="text-gray-800 font-bold text-xl tracking-tight">
+        <span className=" bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-emerald-500 font-bold text-xl tracking-wide ">
           PRAJWAL.
         </span>
       </div>

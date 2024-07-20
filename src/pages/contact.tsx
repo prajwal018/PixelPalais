@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <PageTitle title="Contact" />
-      <div id="contact" className="m-4">
+      <div id="contact" className="m-4 p-4">
         <div id="Info" className="grid gap-4 m-4 sm:grid-cols-2">
           <div>
             <div className="font-bold text-2xl mx-auto text-center">

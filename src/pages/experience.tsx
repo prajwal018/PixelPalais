@@ -62,54 +62,57 @@ const experience = [
 
 const Experience: React.FC = () => {
   return (
-    <div className="m-4 p-4 grid gap-4 sm:grid-cols-1">
+    <div>
       <PageTitle title="Experiences" />
-      <div>
-        {experience.map((project, index) => (
+      <div className="m-4 p-4 grid gap-2 sm:grid-cols-1">
+        {experience.map((experience, index) => (
           <div
             key={index}
-            className={`grid gap-1 sm:grid-cols-3 p-4 text-left overflow rounded-lg shadow-lg`}
+            className="grid gap-1 sm:grid-cols-3 m-4 p-4 text-left overflow rounded-lg border-4"
           >
-            <div className="col-span-1 ">
-              <div className="text-2xl font-thin">{project.title}</div>
-              <div className="txet-xl font-bold">{project.company}</div>
-              <ul className="ml-4 list-disc text-left line-clamp-3 hover:line-clamp-none lg:line-clamp-none">
-                {project.description.map((line, i) => (
+            <div className="col-span-2 m-4">
+              <div className="flex gap-4">
+                <img
+                  src={experience.url}
+                  alt=""
+                  className="object-cover rounded-full size-12 my-auto"
+                />
+                <div className="">
+                  <div className="text-2xl font-thin">{experience.title}</div>
+                  <div className="txet-xl font-bold">{experience.company}</div>
+                </div>
+              </div>
+
+              <ul className="pt-2 list-disc text-left line-clamp-3 hover:ml-2 hover:line-clamp-none lg:line-clamp-5">
+                {experience.description.map((line, i) => (
                   <li key={i}>{line}</li>
                 ))}
               </ul>
             </div>
-            <div className="col-span-1 mx-auto my-auto">
-              <img
-                src={project.url}
-                alt=""
-                className="object-cover rounded-full size-40"
-              />
-            </div>
+
             <div className="col-span-1 py-auto">
               <div className="text-xl font-bold">Technologies Used</div>
               <div className="text-left">
-                {project.technologies.map((item, index) => (
+                {experience.technologies.map((item, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-secondary-200 shadow-lg shadow-gray-500/40 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 my-2"
+                    className="inline-block bg-primary-100 shadow-lg shadow-gray-500/40 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 my-2"
                   >
                     #{item}
                   </span>
                 ))}
               </div>
-              <div className="text-xl font-bold my-4">
+              <div className="text-xl font-bold mt-4">
                 Achievements & Outcomes
               </div>
               <ul className="ml-4 list-disc text-left">
-                {project.outcomes.map((outcome, i) => (
+                {experience.outcomes.map((outcome, i) => (
                   <li key={i}>{outcome}</li>
                 ))}
               </ul>
             </div>
           </div>
         ))}
-        <div></div>
       </div>
     </div>
   );

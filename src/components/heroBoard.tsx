@@ -40,7 +40,7 @@ const HeroBoard: React.FC = () => {
         </Transition>
         <HelloPrompter />
         <button
-          className="absolute right-14 -bottom-6 bg-fuchsia-300  rounded-full text-fuchsia-700 font-semibold p-2 btn-light"
+          className="absolute right-12 -bottom-6 bg-gradient-to-r from-blue-500 to-cyan-500  rounded-l-full text-primary-900 p-2"
           onClick={() =>
             window.open(
               "https://www.linkedin.com/in/prajwal018",
@@ -52,7 +52,7 @@ const HeroBoard: React.FC = () => {
           Hire Me
         </button>
         <button
-          className="absolute -right-24 bottom-4 bg-emerald-300 rounded-full text-emerald-700 p-2 me-2"
+          className="absolute -right-24 -bottom-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-r-full text-primry-900 p-2"
           onClick={() => {
             const resumeLink = document.createElement("a");
             resumeLink.href = "/prajwal_kuchewar.pdf";
@@ -65,13 +65,13 @@ const HeroBoard: React.FC = () => {
           Download My CV
         </button>
 
-        <div className="bg-emerald-300 text-bold text-xl text-emerald-700 absolute right-16 top-1 rounded-lg p-2">
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-bold text-xl text-primry-700 absolute right-16 top-1 rounded-lg p-2">
           Web Developer
         </div>
-        <div className="bg-indigo-300  text-bold text-xl text-indigo-700 absolute -right-6 top-16 rounded-lg p-2">
+        <div className="bg-indigo-300  text-bold text-xl text-indigo-700 absolute -right-6 top-16 rounded-sm p-2">
           UI/UX Professional
         </div>
-        <div className="bg-rose-300  text-bold text-xl text-rose-700 absolute -right-20 top-32 rounded-lg p-2">
+        <div className="bg-rose-300  text-bold text-xl text-rose-700 absolute -right-20 top-32 rounded-tl-md rounded-br-md p-2">
           Software Engineer
         </div>
         <div
@@ -83,7 +83,7 @@ const HeroBoard: React.FC = () => {
         <div className="bg-rose-300  text-bold text-xl text-rose-700 absolute left-32 ml-2 top-16 rounded-lg p-2 rotate-90">
           Certification & Education
         </div>
-        <div className="bg-sky-300 text-wrap md:text-balance sm:truncate w-1/2 text-sky-700 font-bold absolute -left-20 -bottom-2 rounded-lg p-2">
+        <div className="bg-gradient-to-r from-orange-200 to-cyan-200 text-wrap md:text-balance sm:truncate w-1/2 text-sky-700 font-bold absolute -left-20 -bottom-2 rounded-lg p-2">
           Proactive student eager to contribute to the coding <br />
           community through hard work and dedication to quality.
         </div>
