@@ -5,7 +5,7 @@ import { SiLeetcode } from "react-icons/si";
 const AboutMe: React.FC = () => {
   return (
     <>
-      <div className="border-4 sm:rounded-none rounded-full sm:rounded-l-full text-center sm:text-left bg-primary-200 col-span-1 sm:col-span-2 p-4">
+      <div className="rounded-full text-center sm:text-left bg-gradient-to-b from-gray-300 to-gray-100 col-span-1 sm:col-span-2 p-4">
         <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
         <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
         <p className=" text-l mb-8">
@@ -16,8 +16,10 @@ const AboutMe: React.FC = () => {
           my skills in creating impactful projects and collaborating with
           cross-functional teams.
         </p>
-        <p className=" text-right mb-2">You Can Follow Me Here:</p>
-        <div className="flex gap-2 justify-end">
+        <p className="text-center sm:text-right mb-2">
+          You Can Follow Me Here:
+        </p>
+        <div className="flex gap-2 justify-center sm:justify-end ">
           <button
             onClick={() =>
               window.open(
@@ -68,7 +70,7 @@ const AboutMe: React.FC = () => {
       <img
         alt="A beautiful sunset over the mountains"
         src={`./aboutme-pic.png`}
-        className="object-cover pos-left mx-auto sm:my-auto rounded-full sm:rounded-none sm:rounded-r-full size-96 shadow-lg shadow-gray-500/40"
+        className="border-4 p-2 object-cover mx-auto sm:my-auto rounded-full size-80 shadow-lg shadow-gray-500/40"
       />
     </>
   );

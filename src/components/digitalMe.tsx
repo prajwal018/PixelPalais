@@ -10,7 +10,7 @@ const DigitalMe: React.FC = () => {
         <div className="p-4 w-full my-auto ">
           <LiteYoutubeEmbed id="iCvmsMzlF7o" />
         </div>
-        <div className=" sm:rounded-full sm:bg-primary-200 col-span-1 p-4">
+        <div className=" sm:rounded-full sm:bg-gradient-to-b from-gray-300 to-gray-100 col-span-1 p-4">
           <h3 className="font-bold text-2xl ">Favourite TED Talk</h3>
           <h3 className="font-semibold sm:text-xl mb-4">
             The power of vulnerability - by Brené Brown
