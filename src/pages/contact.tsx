@@ -4,7 +4,6 @@ import React, { useState } from "react";
 // import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import PageTitle from "../components/page_title.tsx";
-import { BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
 
 const Contact: React.FC = () => {
   // const history = useHistory();
@@ -46,64 +45,30 @@ const Contact: React.FC = () => {
       <PageTitle title="Contact" />
       <div id="contact" className="m-4 p-4">
         <div id="Info" className="grid gap-4 m-4 sm:grid-cols-2">
-          <div>
-            <div className="font-bold text-2xl mx-auto text-center">
-              Quick Support
-            </div>
-            <div className="text-xl font-normal text-center p-2">
-              These are the words we live by in everything we do. Every story we
-              tell, every brand <br />
-              we build, and every interaction we create
-            </div>
+          <div className="border-4 rounded-lg p-4">
+            <h3 className="font-bold text-2xl text-right">Stay Connected </h3>
+            <h3 className="font-semibold text-xl mb-4 text-right">
+              Not sure how to say hello?
+            </h3>
+
+            <p className=" text-l mb-8 text-right ">
+              Whether you're looking for advice, want to discuss the latest tech
+              trends, or just want to connect, I’m always open to new
+              conversations. Building a strong network is key to staying updated
+              and inspired in the tech world.
+            </p>
           </div>
 
-          <div className="border-4 rounded-full lg:rounded-lg bg-primary-200 sm:col-span-1 p-4">
-            <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
-            <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
+          <div className="border-4 rounded-lg bg-primary-200 sm:col-span-1 p-4">
+            <h3 className="font-bold text-2xl ">Let's Collaborate</h3>
+            <h3 className="font-semibold text-xl mb-4">
+              Ready to Create Something Amazing?
+            </h3>
             <p className=" text-l mb-8">
-              Proactive student eager to contribute to the coding community
-              through hard work and dedication to quality. Seeking to use
-              exceptional communication skills as a team member/software
-              developer. Proficiency in Python, Java, Data Structures, and
-              Algorithms. Passionate about web development and user experience
-              design.
+              Are you working on a groundbreaking project or have an innovative
+              idea? I’d love to hear about it! Collaboration is the heart of
+              innovation, and together we can turn great ideas into reality.
             </p>
-            <p className=" text-right mb-2">You Can Follow Me Here:</p>
-            <div className="flex gap-2 justify-end">
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://www.instagram.com/prxjwxl.018/",
-                    "_blank",
-                    "noopener,noreferrer"
-                  )
-                }
-              >
-                <BsInstagram className="size-12 p-2" />
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/prajwal018",
-                    "_blank",
-                    "noopener,noreferrer"
-                  )
-                }
-              >
-                <BsLinkedin className="size-12 p-2" />
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://github.com/prajwal018",
-                    "_blank",
-                    "noopener,noreferrer"
-                  )
-                }
-              >
-                <BsGithub className="size-12 p-2" />
-              </button>
-            </div>
           </div>
         </div>
         <div id="comment" className="m-4 grid gap-4 sm:grid-cols-2">
@@ -142,7 +107,7 @@ const Contact: React.FC = () => {
                   required
                 />
               </div>
-              <div className="mb-8 pb-12 relative">
+              <div className="mb-8 pb-12 relative overflow-x-clip">
                 <div className="font-black text-7xl sm:text-9xl opacity-25">
                   Message
                 </div>

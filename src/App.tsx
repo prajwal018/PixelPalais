@@ -16,7 +16,7 @@ function App() {
       <Router>
         <ToastContainer />
 
-        {/* <div className="bg-primary-100"> */}
+        {/* <div className="bg-gradient-to-t from-gray-900 to-gray-900"> */}
         <Navbar />
         <div>
           <main>
