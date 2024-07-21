@@ -5,7 +5,7 @@ import { SiLeetcode } from "react-icons/si";
 const AboutMe: React.FC = () => {
   return (
     <>
-      <div className="border-4 rounded-full bg-primary-200 col-span-1 lg:col-span-2 p-4">
+      <div className="border-4 rounded-full bg-primary-200 col-span-1 md:col-span-2 p-4">
         <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
         <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
         <p className=" text-l mb-8">
