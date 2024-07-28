@@ -24,9 +24,13 @@ const HeroBoard: React.FC = () => {
           className="object-cover rounded-lg absolute top-8 left-72 h-28 w-80"
           src="https://i.pinimg.com/736x/5f/49/3f/5f493f4652abbec160af3f5e3b46ea71.jpg"
         />
-        <img
-          className="object-cover rounded-lg absolute bottom-6 right-72 w-56 h-36"
+        <img //om
+          className="object-cover rounded-lg absolute bottom-6 right-72 w-56 h-36 hidden dark:block"
           src="https://i.pinimg.com/474x/42/40/a5/4240a5e7104dfee6cd8342ba0a67d209.jpg"
+        />
+        <img //om
+          className="object-cover rounded-lg absolute bottom-6 right-72 w-56 h-36 dark:hidden block"
+          src="https://i.pinimg.com/474x/ad/49/d1/ad49d1fb57890e5de09bb8c257da7a92.jpg"
         />
         <img
           className="object-cover rounded-lg absolute -top-12 right-60 pb-2 size-24"
@@ -40,7 +44,7 @@ const HeroBoard: React.FC = () => {
         </Transition>
         <HelloPrompter />
         <button
-          className="absolute right-12 -bottom-6 bg-gradient-to-r from-blue-500 to-cyan-500  rounded-l-full text-primary-900 p-2"
+          className="absolute right-12 -bottom-6 bg-gradient-to-r from-blue-500 to-cyan-500  rounded-l-full text-dark dark:text-light p-2"
           onClick={() =>
             window.open(
               "https://www.linkedin.com/in/prajwal018",
@@ -91,11 +95,11 @@ const HeroBoard: React.FC = () => {
       <div className="block md:hidden">
         <div
           onClick={() => setOpen((open) => !open)}
-          className="font-bold text-xl text-primary-200 rounded-lg px-2 flex justify-between"
+          className="font-bold text-xl text-dark dark:text-light rounded-lg px-2 flex justify-between"
         >
           <div className="my-auto">
             I'm Prajwal Kuchewar
-            <div className="  font-thin text-l text-primary-200 rounded-lg mb-2">
+            <div className="  font-thin text-l text-dark dark:text-light rounded-lg mb-2">
               Software Engineer
             </div>
           </div>
@@ -105,13 +109,13 @@ const HeroBoard: React.FC = () => {
           />
         </div>
 
-        <div className="text-wrap md:text-balance sm:truncate text-primary-200 font-thin rounded-lg p-2">
+        <div className="text-wrap md:text-balance sm:truncate text-dark dark:text-light font-thin rounded-lg p-2">
           Proactive student eager to contribute to the coding community through
           hard work and dedication to quality.
         </div>
         <div className="flex justify-end text-white">
           <button
-            className="bg-primary-600 shadow-lg shadow-gray-900/40 hover:bg-primary-800 text-primary-200 py-1 px-3 rounded-full"
+            className="bg-light shadow-lg shadow-gray-900/40 hover:bg-light dark:bg-dark text-dark dark:text-light py-1 px-3 rounded-full"
             onClick={() => {
               const resumeLink = document.createElement("a");
               resumeLink.href = "/prajwal_kuchewar.pdf";

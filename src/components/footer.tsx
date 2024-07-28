@@ -1,11 +1,12 @@
 import { BsEnvelopeFill, BsLink, BsTelephoneFill } from "react-icons/bs";
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "./button";
 
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="bg-primary-200 rounded-lg mx-4 mt-4 p-4">
+      <div className="bg-lightSecondary dark:bg-darkSecondary rounded-lg mx-4 mt-4 p-4">
         <div className="text-3xl font-bold text-center">Let's Talk!</div>
         <div className="m-4 grid gap-12 sm:grid-cols-3 text-center item-center">
           <div className="grid grid-cols-1 text-center">
@@ -46,11 +47,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <a className="flex justify-center mx-auto" href="/contact">
+        <a className="flex justify-center " href="/contact">
           <Link to="/contact">
-            <button className="item-center rounded-full py-2 px-4 text-primary-200 bg-primary-800 shadow-lg shadow-gray-800/40 ">
-              Hire Me
-            </button>
+            <Button title="Hire Me" />
           </Link>
         </a>
       </div>

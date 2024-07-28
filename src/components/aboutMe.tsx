@@ -5,10 +5,10 @@ import { SiLeetcode } from "react-icons/si";
 const AboutMe: React.FC = () => {
   return (
     <>
-      <div className="rounded-full text-center sm:text-left bg-gradient-to-b from-gray-300 to-gray-100 col-span-1 sm:col-span-2 p-4">
+      <div className="rounded-full text-center sm:text-left col-span-1 sm:col-span-2 p-4 mx-4">
         <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
         <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
-        <p className=" text-l mb-8">
+        <p className=" text-l mb-8 dark:text-lightTertiary text-darkTertiary ">
           Hello! I'm Prajwal Kuchewar, a passionate software developer with
           expertise in multiple programming languages and frameworks. I thrive
           on turning ideas into reality through innovative and efficient

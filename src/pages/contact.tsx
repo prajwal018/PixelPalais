@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
       <PageTitle title="Contact" />
       <div id="contact" className="m-4 p-4">
         <div id="Info" className="grid gap-4 m-4 sm:grid-cols-2">
-          <div className="border-4 rounded-lg p-4">
+          <div className="rounded-lg p-4">
             <h3 className="font-bold text-2xl text-right">Stay Connected </h3>
             <h3 className="font-semibold text-xl mb-4 text-right">
               Not sure how to say hello?
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
-          <div className="border-4 rounded-lg bg-primary-200 sm:col-span-1 p-4">
+          <div className=" rounded-lg bg-lightTertiary dark:bg-darkTertiary sm:col-span-1 p-4">
             <h3 className="font-bold text-2xl ">Let's Collaborate</h3>
             <h3 className="font-semibold text-xl mb-4">
               Ready to Create Something Amazing?
@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
               Poster for the Day !
             </div>
             <img
-              className="object-scale-down h-auto w-96 p-4 bg-gray-900"
+              className="object-scale-down h-auto w-96 p-4 bg-darkPrimary dark:bg-lightPrimary"
               src="https://i.pinimg.com/474x/5e/4b/ea/5e4beaa17a95280f5cfbb0963632b81b.jpg"
             />
           </div>
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
                   Name
                 </div>
                 <input
-                  className="absolute inset-x-0 bottom-0 text-primary-800 opacity-50 rounded-full border-2 border-primary-600 p-2"
+                  className="absolute inset-x-0 bottom-0 text-dark dark:text-light opacity-50 rounded-full border-2 border-primary-600 p-2"
                   type="text"
                   name="name"
                   id="name"
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                   Email
                 </div>
                 <input
-                  className="absolute text-primary-800 inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-2"
+                  className="absolute text-dark dark:text-light inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-2"
                   type="email"
                   name="email"
                   id="email"
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                   Message
                 </div>
                 <textarea
-                  className="absolute text-primary-800 inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-4"
+                  className="absolute text-dark dark:text-light inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-4"
                   name="message"
                   id="message"
                   rows={2}
@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="item-center w-full rounded-full p-4 text-primary-200 bg-primary-800 shadow-lg shadow-gray-800/40 "
+                  className="item-center w-full rounded-full p-4 bg-darkPrimary dark:bg-lightPrimary dark:text-darkPrimary text-lightPrimary shadow-lg shadow-gray-500/40 "
                   type="submit"
                 >
                   Send

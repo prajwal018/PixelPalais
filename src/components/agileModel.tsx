@@ -1,4 +1,6 @@
+import Button from "./button.tsx";
 import { ServiceCardProps } from "./serviceCard.tsx";
+import Tag from "./tag.tsx";
 
 const agileProcess: ServiceCardProps[] = [
   {
@@ -49,24 +51,19 @@ const AgileModel = () => {
   return (
     <>
       {agileProcess.map((step, index) => (
-        <div className={`rounded-full p-8 bg-primary-200 size-80 mx-auto`}>
+        <div
+          className={`rounded-full p-8 bg-lightPrimary dark:bg-darkPrimary size-80 mx-auto`}
+        >
           <div className="font-bold text-xl mb-2">{step.title}</div>
           <div className="font-semibold text-l mb-2">{step.subTitle}</div>
           {step.link.map((item, index) => (
-            <span
-              key={index}
-              className="inline-block bg-primary-100 shadow-lg shadow-gray-500/40 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >
-              #{item}
-            </span>
+            <Tag index={index} item={item} />
           ))}
-          <p className="text-gray-700 text-base mb-2 line-clamp-2">
+          <p className="dark:text-lightPrimary text-darkPrimary text-base mb-2 line-clamp-2">
             {step.text}
           </p>
           <div className="flex justify-end text-white">
-            <div className="bg-primary-800 shadow-lg shadow-gray-900/40  hover:bg-primary-600 text-primary-200 py-1 px-3 rounded-full">
-              Learn more
-            </div>
+            <Button title="Learn more" />
           </div>
           <div className="font-black text-9xl mb-2 opacity-25">{index + 1}</div>
         </div>

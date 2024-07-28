@@ -12,14 +12,6 @@ const projects = [
     technologies: ["React", "Bootstrap CSS"],
   },
   {
-    title: "Creative Landing Page",
-    url: "https://prajwal018.vercel.app/",
-    description:
-      "The Burnel Landing Page is a sleek and modern web interface designed to capture the essence of Burnel, a forward-thinking business dedicated to providing innovative solutions. The landing page serves as the digital gateway to Burnel’s offerings, effectively communicating the brand's value proposition and engaging potential customers from the first interaction.",
-    src: "./brunel.png",
-    technologies: ["React", "Material CSS"],
-  },
-  {
     title: "Portfolio Website",
     url: "https://pixel-palais.vercel.app",
     description:
@@ -28,12 +20,29 @@ const projects = [
     technologies: ["React", "Tailwind CSS"],
   },
   {
+    title: "Creative Landing Page",
+    url: "https://prajwal018.vercel.app/",
+    description:
+      "The Burnel Landing Page is a sleek and modern web interface designed to capture the essence of Burnel, a forward-thinking business dedicated to providing innovative solutions. The landing page serves as the digital gateway to Burnel’s offerings, effectively communicating the brand's value proposition and engaging potential customers from the first interaction.",
+    src: "./brunel.png",
+    technologies: ["React", "Material CSS"],
+  },
+
+  {
     title: "Safe Route",
     url: "https://pixel-palais.vercel.app",
     description:
       "An Innovative IoT And AI-Based Fire Evacuation System Tailored For Smart Buildings.The System Ensures Optimal Safety During Fire Incidents. It Utilizes IoT Sensors Strategically Placed Throughout The Building To Detect And Monitor Fire Conditions In Real-Time. The AI Component Analyzes Data From Sensors To Dynamically Determine The Safest Evacuation Routes For Occupants.",
     src: "https://i.pinimg.com/474x/5c/66/7c/5c667cfd36901989856d4dec03862138.jpg",
     technologies: ["Firebase", "ReactJS", "React Native", "NodeJS", "IOT"],
+  },
+  {
+    title: "CodeHub",
+    url: "https://codehub-ioit.vercel.app/",
+    description:
+      "The CodeHub Website is a comprehensive and interactive platform designed to showcase my events, projects, and professional body of CodHub Developer Club. The website serves as a digital presence, providing potential individuals and collaborators with a detailed view of club's capabilities and achievements.",
+    src: "./codehub.png",
+    technologies: ["NextJS", "Framer-motion"],
   },
 ];
 

@@ -6,24 +6,24 @@ import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 const DigitalMe: React.FC = () => {
   return (
     <>
-      <div className="border-4 rounded-lg p-4 grid gap-4 sm:grid-cols-2">
+      <div className="p-4 grid gap-4 sm:grid-cols-2">
         <div className="p-4 w-full my-auto ">
           <LiteYoutubeEmbed id="iCvmsMzlF7o" />
         </div>
-        <div className=" sm:rounded-full sm:bg-gradient-to-b from-gray-300 to-gray-100 col-span-1 p-4">
-          <h3 className="font-bold text-2xl ">Favourite TED Talk</h3>
-          <h3 className="font-semibold sm:text-xl mb-4">
+        <div className="sm:rounded-full col-span-1 p-4">
+          <h3 className="font-bold text-2xl text-right">Favourite TED Talk</h3>
+          <h3 className="font-semibold sm:text-xl text-right mb-4">
             The power of vulnerability - by Brené Brown
           </h3>
-          <p className=" text-l mb-8">
+          <p className="text-right text-l mb-8 dark:text-lightTertiary text-darkTertiary ">
             Her insightful exploration of human connection through the lens of
             vulnerability deeply resonates with me. Brown’s talk emphasizes the
             importance of embracing our imperfections and fostering genuine
             relationships, which inspires me both personally and professionally
             to lead with empathy and authenticity.
           </p>
-          <p className=" text-right mb-2">You Can Follow Me Here:</p>
-          <div className="flex gap-2 justify-end">
+          <p className="text-left ml-2 mb-2">You Can Follow Me Here:</p>
+          <div className="flex gap-2">
             <button
               onClick={() =>
                 window.open(

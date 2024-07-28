@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-right justify-between flex-wrap bg-transparent text-gray-800 p-3">
+    <div className="flex items-right justify-between flex-wrap bg-transparent text-darkPrimary dark:text-lightPrimary p-3">
       <div className="flex items-center flex-shrink-0 mr-6">
         <span className=" bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-emerald-500 font-bold text-xl tracking-wide ">
           PRAJWAL.
@@ -18,7 +18,7 @@ const Navbar = () => {
 
       <div className="block lg:hidden">
         <button
-          className="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-400 hover:text-gray-400 hover:border-gray-200"
+          className="flex items-center px-3 py-2 rounded  text-darkPrimary dark:text-lightPrimary hover:opacity-60 "
           onClick={toggleMenu}
         >
           <svg
@@ -33,38 +33,38 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`w-full block flex-grow lg:flex lg:items-end lg:w-auto ${
+        className={` w-full block flex-grow lg:flex lg:items-end lg:w-auto ${
           isOpen ? "block" : "hidden"
         }`}
       >
         <div className="text-md text-base lg:flex-grow lg:justify-end lg:text-right">
           <Link
             to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400 mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 mr-4"
           >
             Home
           </Link>
           <Link
             to="/contact"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400 mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 mr-4"
           >
             Contact
           </Link>
           <Link
             to="/about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400 mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 mr-4"
           >
             About
           </Link>
           <Link
             to="/experience"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400 mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 mr-4"
           >
             Experience
           </Link>
           <Link
             to="/projects"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-400"
+            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60"
           >
             Projects
           </Link>

@@ -25,7 +25,7 @@ const Services: ServiceCardProps[] = [
 const Home: React.FC = () => {
   return (
     <>
-      <div className="m-4 sm:mb-20 md:mx-auto rounded-lg relative p-2 md:h-80 md:w-2/3 bg-stone-800 md:bg-primary-300 md:back">
+      <div className="m-4 sm:mb-20 md:mx-auto rounded-lg relative p-2 md:h-80 md:w-2/3  bg-lightSecondary dark:bg-darkSecondary  back dark:back">
         <HeroBoard />
       </div>
       <div className="m-4 sm:mb-20 my-8 grid gap-8 sm:grid-cols-3">

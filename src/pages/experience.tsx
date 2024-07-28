@@ -1,5 +1,6 @@
 import React from "react";
 import PageTitle from "../components/page_title.tsx";
+import Tag from "../components/tag.tsx";
 
 const experience = [
   {
@@ -68,7 +69,8 @@ const Experience: React.FC = () => {
         {experience.map((experience, index) => (
           <div
             key={index}
-            className="grid gap-1 sm:grid-cols-3 m-4 p-4 text-left overflow rounded-lg border-4"
+            className="grid gap-1 sm:grid-cols-3 m-4 p-4 text-left overflow rounded-lg bg-lightPrimary dark:bg-darkPrimary shadow-lg shadow-bal
+            /40"
           >
             <div className="col-span-2 m-4">
               <div className="flex gap-4">
@@ -83,7 +85,7 @@ const Experience: React.FC = () => {
                 </div>
               </div>
 
-              <ul className="pt-2 list-disc text-left line-clamp-3 hover:ml-2 hover:line-clamp-none lg:line-clamp-5">
+              <ul className="pt-2 list-disc text-left dark:text-lightTertiary text-darkTertiary line-clamp-3 hover:ml-2 hover:line-clamp-none lg:line-clamp-5">
                 {experience.description.map((line, i) => (
                   <li key={i}>{line}</li>
                 ))}
@@ -92,20 +94,15 @@ const Experience: React.FC = () => {
 
             <div className="col-span-1 py-auto">
               <div className="text-xl font-bold">Technologies Used</div>
-              <div className="text-left">
+              <div className="text-left py-2">
                 {experience.technologies.map((item, index) => (
-                  <span
-                    key={index}
-                    className="inline-block bg-primary-100 shadow-lg shadow-gray-500/40 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 my-2"
-                  >
-                    #{item}
-                  </span>
+                  <Tag index={index} item={item} />
                 ))}
               </div>
               <div className="text-xl font-bold mt-4">
                 Achievements & Outcomes
               </div>
-              <ul className="ml-4 list-disc text-left">
+              <ul className="ml-4 list-disc text-left dark:text-lightTertiary text-darkTertiary">
                 {experience.outcomes.map((outcome, i) => (
                   <li key={i}>{outcome}</li>
                 ))}
