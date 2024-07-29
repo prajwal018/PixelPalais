@@ -65,11 +65,11 @@ const Experience: React.FC = () => {
   return (
     <div>
       <PageTitle title="Experiences" />
-      <div className="m-4 p-4 grid gap-2 sm:grid-cols-1">
+      <div className="m-4 p-4 grid gap-4">
         {experience.map((experience, index) => (
           <div
             key={index}
-            className="grid gap-1 sm:grid-cols-3 m-4 p-4 text-left overflow rounded-lg bg-lightPrimary dark:bg-darkPrimary shadow-lg shadow-bal
+            className="grid gap-2 sm:grid-cols-3 p-4 text-left overflow rounded-lg bg-lightPrimary dark:bg-darkPrimary shadow-lg shadow-bal
             /40"
           >
             <div className="col-span-2 m-4">

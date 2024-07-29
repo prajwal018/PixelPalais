@@ -45,12 +45,6 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/contact"
-            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 mr-4"
-          >
-            Contact
-          </Link>
-          <Link
             to="/about"
             className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 mr-4"
           >
@@ -64,9 +58,15 @@ const Navbar = () => {
           </Link>
           <Link
             to="/projects"
-            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60"
+            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 mr-4"
           >
             Projects
+          </Link>
+          <Link
+            to="/contact"
+            className="block mt-4 lg:inline-block lg:mt-0  text-darkPrimary dark:text-lightPrimary hover:opacity-60 "
+          >
+            Contact
           </Link>
         </div>
       </div>
