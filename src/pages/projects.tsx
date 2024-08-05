@@ -4,6 +4,14 @@ import { ProjectWindow } from "../components/projectWindow.tsx";
 
 const projects = [
   {
+    title: "Employee Management System",
+    url: "https://ems-sable.vercel.app/",
+    description:
+      "Employee Management App is a streamlined web application built with ReactJS for managing employee data efficiently. Users can view a list of employees, add new employees, and access detailed information about each employee. The app features a user-friendly interface, leveraging the power of Cosmocloud APIs for data management, ensuring a seamless and responsive experience. Ideal for businesses looking to maintain organized employee records with ease.",
+    src: "./ems.jpg",
+    technologies: ["ReactJS", "CosmoCloud", "MongoDB","API"],
+  },
+  {
     title: "Hiking Life",
     url: "https://hikilifer.netlify.app/",
     description:
