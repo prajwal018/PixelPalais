@@ -1,7 +1,6 @@
-/* eslint-disable react/style-prop-object */
 
 import React, { useState } from "react";
-// import { useHistory } from "react-router-dom";
+
 import { toast } from "react-toastify";
 import PageTitle from "../components/page_title.tsx";
 
@@ -43,15 +42,15 @@ const Contact: React.FC = () => {
   return (
     <>
       <PageTitle title="Contact" />
-      <div id="contact" className="m-4 p-4">
+      <div id="contact" className="p-4 m-4">
         <div id="Info" className="grid gap-4 m-4 sm:grid-cols-2">
-          <div className="rounded-lg p-4">
-            <h3 className="font-bold text-2xl text-right">Stay Connected </h3>
-            <h3 className="font-semibold text-xl mb-4 text-right">
+          <div className="p-4 rounded-lg">
+            <h3 className="text-2xl font-bold text-right">Stay Connected </h3>
+            <h3 className="mb-4 text-xl font-semibold text-right">
               Not sure how to say hello?
             </h3>
 
-            <p className=" text-l mb-8 text-right ">
+            <p className="mb-8 text-right text-l">
               Whether you're looking for advice, want to discuss the latest tech
               trends, or just want to connect, I’m always open to new
               conversations. Building a strong network is key to staying updated
@@ -59,60 +58,60 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
-          <div className=" rounded-lg bg-lightTertiary dark:bg-darkTertiary sm:col-span-1 p-4">
-            <h3 className="font-bold text-2xl ">Let's Collaborate</h3>
-            <h3 className="font-semibold text-xl mb-4">
+          <div className="p-4 rounded-lg bg-lightTertiary dark:bg-darkTertiary sm:col-span-1">
+            <h3 className="text-2xl font-bold ">Let's Collaborate</h3>
+            <h3 className="mb-4 text-xl font-semibold">
               Ready to Create Something Amazing?
             </h3>
-            <p className=" text-l mb-8">
+            <p className="mb-8 text-l">
               Are you working on a groundbreaking project or have an innovative
               idea? I’d love to hear about it! Collaboration is the heart of
               innovation, and together we can turn great ideas into reality.
             </p>
           </div>
         </div>
-        <div id="comment" className="m-4 grid gap-4 sm:grid-cols-2">
+        <div id="comment" className="grid gap-4 m-4 sm:grid-cols-2">
           <div className="mx-auto">
-            <div className="p-4 font-bold text-2xl text-center">
+            <div className="p-4 text-2xl font-bold text-center">
               Poster for the Day !
             </div>
             <img
-              className="object-scale-down h-auto w-96 p-4 bg-darkPrimary dark:bg-lightPrimary"
+              className="object-scale-down h-auto p-4 w-96 bg-darkPrimary dark:bg-lightPrimary"
               src="https://i.pinimg.com/474x/5e/4b/ea/5e4beaa17a95280f5cfbb0963632b81b.jpg"
             />
           </div>
           <div className="my-12 sm:cols-span-1">
             <form onSubmit={handleSubmit}>
-              <div className="mb-4 relative pb-4">
-                <div className="font-black text-7xl sm:text-9xl opacity-25">
+              <div className="relative pb-4 mb-4">
+                <div className="font-black opacity-25 text-7xl sm:text-9xl">
                   Name
                 </div>
                 <input
-                  className="absolute inset-x-0 bottom-0 text-dark dark:text-light opacity-50 rounded-full border-2 border-primary-600 p-2"
+                  className="absolute inset-x-0 bottom-0 p-2 border-2 rounded-full opacity-50 text-dark dark:text-light border-primary-600"
                   type="text"
                   name="name"
                   id="name"
                   required
                 />
               </div>
-              <div className="mb-4 relative pb-4">
-                <div className="font-black text-7xl sm:text-9xl opacity-25">
+              <div className="relative pb-4 mb-4">
+                <div className="font-black opacity-25 text-7xl sm:text-9xl">
                   Email
                 </div>
                 <input
-                  className="absolute text-dark dark:text-light inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-2"
+                  className="absolute inset-x-0 bottom-0 p-2 border-2 rounded-full opacity-50 text-dark dark:text-light border-primary-600"
                   type="email"
                   name="email"
                   id="email"
                   required
                 />
               </div>
-              <div className="mb-8 pb-12 relative overflow-x-clip">
-                <div className="font-black text-7xl sm:text-9xl opacity-25">
+              <div className="relative pb-12 mb-8 overflow-x-clip">
+                <div className="font-black opacity-25 text-7xl sm:text-9xl">
                   Message
                 </div>
                 <textarea
-                  className="absolute text-dark dark:text-light inset-x-0 bottom-0 opacity-50 rounded-full border-2 border-primary-600 p-4"
+                  className="absolute inset-x-0 bottom-0 p-4 border-2 rounded-full opacity-50 text-dark dark:text-light border-primary-600"
                   name="message"
                   id="message"
                   rows={2}
@@ -121,7 +120,7 @@ const Contact: React.FC = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="item-center w-full rounded-full p-4 bg-darkPrimary dark:bg-lightPrimary dark:text-darkPrimary text-lightPrimary shadow-lg shadow-gray-500/40 "
+                  className="w-full p-4 rounded-full shadow-lg item-center bg-darkPrimary dark:bg-lightPrimary dark:text-darkPrimary text-lightPrimary shadow-gray-500/40 "
                   type="submit"
                 >
                   Send

@@ -7,7 +7,7 @@ const HelloPrompter = () => {
 
   return (
     <div
-      className="bg-light dark:bg-dark  size-16 absolute ml-2 left-19 top-2 rounded-full"
+      className="absolute ml-2 rounded-full bg-light dark:bg-dark size-16 left-19 top-2"
       onClick={handleHi}
     >
       <span className="text-5xl">👋</span>

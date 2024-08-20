@@ -6,7 +6,7 @@ export interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ title, url }) => {
   return (
     <button
-      className="item-center rounded-full py-2 px-4 bg-darkPrimary dark:bg-lightPrimary dark:text-darkPrimary text-lightPrimary shadow-lg shadow-gray-500/40"
+      className="px-4 py-2 rounded-full shadow-lg item-center bg-darkPrimary dark:bg-lightPrimary dark:text-darkPrimary text-lightPrimary shadow-gray-500/40"
       onClick={() => window.open(url, "_blank", "noopener,noreferrer")}
     >
       {title}

@@ -6,9 +6,9 @@ import Button from "./button";
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="bg-lightSecondary dark:bg-darkSecondary rounded-lg mx-4 mt-4 p-4">
+      <div className="p-4 mx-4 mt-4 rounded-lg bg-lightSecondary dark:bg-darkSecondary">
         <div className="text-3xl font-bold text-center">Let's Talk!</div>
-        <div className="m-4 grid gap-12 sm:grid-cols-3 text-center item-center">
+        <div className="grid gap-12 m-4 text-center sm:grid-cols-3 item-center">
           <div className="grid grid-cols-1 text-center">
             <div className="flex justify-center">
               <BsTelephoneFill />
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
           </Link>
         </a>
       </div>
-      <div className="flex text-sm justify-end mx-auto">
+      <div className="flex justify-end mx-auto text-sm">
         <p>&copy; 2023 Prajwal Inc.</p>
       </div>
     </>

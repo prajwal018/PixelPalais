@@ -19,9 +19,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className="rounded-lg bg-lightSecondary dark:bg-darkSecondary">
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <div className="font-semibold text-l mb-2">{subTitle}</div>
-        <p className=" text-base mb-2 line-clamp-2">{text}</p>
+        <div className="mb-2 text-xl font-bold">{title}</div>
+        <div className="mb-2 font-semibold text-l">{subTitle}</div>
+        <p className="mb-2 text-base line-clamp-2">{text}</p>
         <div className="pr-6">
           {link.map((item, index) => (
             <Tag index={index} item={item} />

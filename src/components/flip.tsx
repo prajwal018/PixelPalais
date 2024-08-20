@@ -17,25 +17,25 @@ const Flip: React.FC<FlipProps> = ({
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
       <div
-        className="cursor-pointer relative h-80 w-60"
+        className="relative cursor-pointer h-80 w-60"
         onClick={() => setFlip(!flip)}
       >
         <img
-          className="object-cover h-80 w-60 rounded-lg"
+          className="object-cover rounded-lg h-80 w-60"
           src="https://i.pinimg.com/474x/e0/51/3d/e0513dfbe1eee5a02210b9b48b2887fd.jpg"
         />
       </div>
       <div
-        className="h-80 w-60 rounded-lg cursor-pointer"
+        className="rounded-lg cursor-pointer h-80 w-60"
         onClick={() => setFlip(!flip)}
       >
-        <div className="text-center rounded-lg bg-lightSecondary dark:bg-darkSecondary p-4">
-          <h4 className="font-bold text-xl mb-2">{title}</h4>
-          <p className="dark:text-lightTertiary text-darkSecondary text-base mb-2">
+        <div className="p-4 text-center rounded-lg bg-lightSecondary dark:bg-darkSecondary">
+          <h4 className="mb-2 text-xl font-bold">{title}</h4>
+          <p className="mb-2 text-base dark:text-lightTertiary text-darkSecondary">
             {description}
           </p>
           <div className="font-semibold text-l">{name}</div>
-          <div className="font-normal text-l mb-2">{profession}</div>
+          <div className="mb-2 font-normal text-l">{profession}</div>
         </div>
       </div>
     </ReactCardFlip>

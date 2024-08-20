@@ -54,18 +54,18 @@ const AgileModel = () => {
         <div
           className={`rounded-full p-8 bg-lightPrimary dark:bg-darkPrimary size-80 mx-auto`}
         >
-          <div className="font-bold text-xl mb-2">{step.title}</div>
-          <div className="font-semibold text-l mb-2">{step.subTitle}</div>
+          <div className="mb-2 text-xl font-bold">{step.title}</div>
+          <div className="mb-2 font-semibold text-l">{step.subTitle}</div>
           {step.link.map((item, index) => (
             <Tag index={index} item={item} />
           ))}
-          <p className="dark:text-lightPrimary text-darkPrimary text-base mb-2 line-clamp-2">
+          <p className="mb-2 text-base dark:text-lightPrimary text-darkPrimary line-clamp-2">
             {step.text}
           </p>
           <div className="flex justify-end text-white">
             <Button title="Learn more" />
           </div>
-          <div className="font-black text-9xl mb-2 opacity-25">{index + 1}</div>
+          <div className="mb-2 font-black opacity-25 text-9xl">{index + 1}</div>
         </div>
       ))}
     </>

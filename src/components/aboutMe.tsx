@@ -5,10 +5,10 @@ import { SiLeetcode } from "react-icons/si";
 const AboutMe: React.FC = () => {
   return (
     <>
-      <div className="rounded-full text-center sm:text-left col-span-1 sm:col-span-2 p-4 mx-4">
-        <h3 className="font-bold text-2xl ">Need a Creative Website?</h3>
-        <h3 className="font-semibold text-xl mb-4">I Can Help You!</h3>
-        <p className=" text-l mb-8 dark:text-lightTertiary text-darkTertiary ">
+      <div className="col-span-1 p-4 mx-4 text-center rounded-full sm:text-left sm:col-span-2">
+        <h3 className="text-2xl font-bold ">Need a Creative Website?</h3>
+        <h3 className="mb-4 text-xl font-semibold">I Can Help You!</h3>
+        <p className="mb-8 text-l dark:text-lightTertiary text-darkTertiary">
           Hello! I'm Prajwal Kuchewar, a passionate software developer with
           expertise in multiple programming languages and frameworks. I thrive
           on turning ideas into reality through innovative and efficient
@@ -16,10 +16,10 @@ const AboutMe: React.FC = () => {
           my skills in creating impactful projects and collaborating with
           cross-functional teams.
         </p>
-        <p className="text-center sm:text-right mb-2">
+        <p className="mb-2 text-center sm:text-right">
           You Can Follow Me Here:
         </p>
-        <div className="flex gap-2 justify-center sm:justify-end ">
+        <div className="flex justify-center gap-2 sm:justify-end ">
           <button
             onClick={() =>
               window.open(
@@ -29,7 +29,7 @@ const AboutMe: React.FC = () => {
               )
             }
           >
-            <SiLeetcode className="size-12 p-2" />
+            <SiLeetcode className="p-2 size-12" />
           </button>
           <button
             onClick={() =>
@@ -40,7 +40,7 @@ const AboutMe: React.FC = () => {
               )
             }
           >
-            <BsInstagram className="size-12 p-2" />
+            <BsInstagram className="p-2 size-12" />
           </button>
           <button
             onClick={() =>
@@ -51,7 +51,7 @@ const AboutMe: React.FC = () => {
               )
             }
           >
-            <BsLinkedin className="size-12 p-2" />
+            <BsLinkedin className="p-2 size-12" />
           </button>
           <button
             onClick={() =>
@@ -62,7 +62,7 @@ const AboutMe: React.FC = () => {
               )
             }
           >
-            <BsGithub className="size-12 p-2" />
+            <BsGithub className="p-2 size-12" />
           </button>
         </div>
       </div>
@@ -70,7 +70,7 @@ const AboutMe: React.FC = () => {
       <img
         alt="A beautiful sunset over the mountains"
         src={`./aboutme-pic.png`}
-        className="border-4 p-2 object-cover mx-auto sm:my-auto rounded-full size-80 shadow-lg shadow-gray-500/40"
+        className="object-cover p-2 mx-auto border-4 rounded-full shadow-lg sm:my-auto size-80 shadow-gray-500/40"
       />
     </>
   );

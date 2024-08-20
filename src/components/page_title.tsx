@@ -6,7 +6,7 @@ interface PageTitleProps {
 
 const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
   return (
-    <div className="bg-lightSecondary dark:bg-darkSecondary m-4 rounded-lg text-center">
+    <div className="m-4 text-center rounded-lg bg-lightSecondary dark:bg-darkSecondary">
       <div className="text-3xl font-bold">{title.toUpperCase()}</div>
     </div>
   );

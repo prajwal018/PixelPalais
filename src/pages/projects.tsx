@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
       <div>
         <PageTitle title="Projects" />
 
-        <div className="m-4 p-4 grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-8 p-4 m-4 sm:grid-cols-1 md:grid-cols-2">
           {projects.map((project) => (
             <ProjectWindow
               title={project.title}

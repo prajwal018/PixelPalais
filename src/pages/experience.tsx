@@ -65,27 +65,25 @@ const Experience: React.FC = () => {
   return (
     <div>
       <PageTitle title="Experiences" />
-      <div className="m-4 p-4 grid gap-4">
-        {experience.map((experience, index) => (
+      <div className="grid gap-4 p-4 m-4">
+        {experience.map((experience) => (
           <div
-            key={index}
-            className="grid gap-2 sm:grid-cols-3 p-4 text-left overflow rounded-lg bg-lightPrimary dark:bg-darkPrimary shadow-lg shadow-bal
-            /40"
+            className="grid gap-2 p-4 text-left rounded-lg shadow-lg sm:grid-cols-3 overflow bg-lightPrimary dark:bg-darkPrimary shadow-bal /40"
           >
             <div className="col-span-2 m-4">
               <div className="flex gap-4">
                 <img
                   src={experience.url}
                   alt=""
-                  className="object-cover rounded-full size-12 my-auto"
+                  className="object-cover my-auto rounded-full size-12"
                 />
                 <div className="">
                   <div className="text-2xl font-thin">{experience.title}</div>
-                  <div className="txet-xl font-bold">{experience.company}</div>
+                  <div className="font-bold txet-xl">{experience.company}</div>
                 </div>
               </div>
 
-              <ul className="pt-2 list-disc text-left dark:text-lightTertiary text-darkTertiary line-clamp-3 hover:ml-2 hover:line-clamp-none lg:line-clamp-5">
+              <ul className="pt-2 text-left list-disc dark:text-lightTertiary text-darkTertiary line-clamp-3 hover:ml-2 hover:line-clamp-none lg:line-clamp-5">
                 {experience.description.map((line, i) => (
                   <li key={i}>{line}</li>
                 ))}
@@ -94,15 +92,15 @@ const Experience: React.FC = () => {
 
             <div className="col-span-1 py-auto">
               <div className="text-xl font-bold">Technologies Used</div>
-              <div className="text-left py-2">
+              <div className="py-2 text-left">
                 {experience.technologies.map((item, index) => (
                   <Tag index={index} item={item} />
                 ))}
               </div>
-              <div className="text-xl font-bold mt-4">
+              <div className="mt-4 text-xl font-bold">
                 Achievements & Outcomes
               </div>
-              <ul className="ml-4 list-disc text-left dark:text-lightTertiary text-darkTertiary">
+              <ul className="ml-4 text-left list-disc dark:text-lightTertiary text-darkTertiary">
                 {experience.outcomes.map((outcome, i) => (
                   <li key={i}>{outcome}</li>
                 ))}

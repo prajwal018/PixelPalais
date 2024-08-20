@@ -20,12 +20,11 @@ function App() {
     document.body.classList.toggle("dark");
   };
   return (
-    <>
-      <Router>
+    <Router>
         <ToastContainer />
         <div className="text-dark dark:text-lightSecondary dark:bg-dark bg-light ">
           <button
-            className="fixed top-20 rounded-l-lg right-0 z-10 block mt-4 lg:inline-block lg:mt-0 bg-darkTertiary dark:bg-lightTertiary p-4 md:p-6 text-darkPrimary dark:text-lightPrimary hover:opacity-70"
+            className="fixed right-0 z-10 block p-4 mt-4 rounded-l-lg top-20 lg:inline-block lg:mt-0 bg-darkTertiary dark:bg-lightTertiary md:p-6 text-darkPrimary dark:text-lightPrimary hover:opacity-70"
             onClick={() => darkModeHandler()}
           >
             {
@@ -48,7 +47,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </>
   );
 }
 export default App;

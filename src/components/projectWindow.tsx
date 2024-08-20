@@ -4,16 +4,16 @@ import Tag from "./tag";
 
 const Header: React.FC<{ path: string }> = ({ path }) => {
   return (
-    <div className="bg-lightPrimary dark:bg-darkPrimary flex justify-between rounded-t-lg border-x-2 border-t-2 border-lightSecondary dark:border-darkSecondary">
-      <div className="w-18 grid gap-1 p-2 grid-cols-2">
-        <div className="rounded-full size-4 bg-red-400"></div>
+    <div className="flex justify-between border-t-2 rounded-t-lg bg-lightPrimary dark:bg-darkPrimary border-x-2 border-lightSecondary dark:border-darkSecondary">
+      <div className="grid grid-cols-2 gap-1 p-2 w-18">
+        <div className="bg-red-400 rounded-full size-4"></div>
         <div className="rounded-full size-4 dark:bg-lightTertiary bg-darkTertiary"></div>
       </div>
       <div className="grid grid-cols-1 text-center text-dark dark:text-light">
         {path}
       </div>
-      <div className="w-16 grid grid-cols-6 text-center">
-        <div className="rounded-full size-4 my-2 text-dark dark:text-light"></div>
+      <div className="grid w-16 grid-cols-6 text-center">
+        <div className="my-2 rounded-full size-4 text-dark dark:text-light"></div>
       </div>
     </div>
   );
@@ -36,12 +36,12 @@ const Content: React.FC<{
   technologies: string[];
 }> = ({ title, description, url, technologies }) => {
   return (
-    <div className="p-4 rounded-b-lg bg-lightPrimary dark:bg-darkPrimary border-x-2 border-b-2 border-lightSecondary dark:border-darkSecondary">
-      <h3 className="font-bold text-2xl ">{title}</h3>
+    <div className="p-4 border-b-2 rounded-b-lg bg-lightPrimary dark:bg-darkPrimary border-x-2 border-lightSecondary dark:border-darkSecondary">
+      <h3 className="text-2xl font-bold ">{title}</h3>
       <p className="text-l line-clamp-4 hover:line-clamp-none dark:text-lightTertiary text-darkTertiary ">
         {description}
       </p>
-      <div className="text-left mb-8  ">
+      <div className="mb-8 text-left ">
         {technologies.map((item, index) => (
           <Tag item={item} index={index} />
         ))}
@@ -61,7 +61,7 @@ export const ProjectWindow: React.FC<{
   technologies: string[];
 }> = ({ url, src, title, description, technologies }) => {
   return (
-    <div className="w-full h-max rounded-b-lg">
+    <div className="w-full rounded-b-lg h-max">
       <Header path={url} />
       <Thumbnail src={src} alt="Project Thumbnail" />
       <Content

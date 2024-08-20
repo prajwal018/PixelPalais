@@ -25,18 +25,18 @@ const Services: ServiceCardProps[] = [
 const Home: React.FC = () => {
   return (
     <>
-      <div className="m-4 sm:mb-20 md:mx-auto rounded-lg relative p-2 md:h-80 md:w-2/3  bg-lightSecondary dark:bg-darkSecondary  back dark:back">
+      <div className="relative p-2 m-4 rounded-lg sm:mb-20 md:mx-auto md:h-80 md:w-2/3 bg-lightSecondary dark:bg-darkSecondary back dark:back">
         <HeroBoard />
       </div>
-      <div className="m-4 sm:mb-20 my-8 grid gap-8 sm:grid-cols-3">
+      <div className="grid gap-8 m-4 my-8 sm:mb-20 sm:grid-cols-3">
         {Services.map((item) => (
           <ServiceCard title={item.title} text={item.text} link={item.link} />
         ))}
       </div>
-      <div className="m-4 sm:mb-20 grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 m-4 sm:mb-20 sm:grid-cols-3">
         <AboutMe />
       </div>
-      <div className="m-4 sm:mb-20 grid gap-4 sm:grid-cols-1">
+      <div className="grid gap-4 m-4 sm:mb-20 sm:grid-cols-1">
         <DigitalMe />
       </div>
     </>

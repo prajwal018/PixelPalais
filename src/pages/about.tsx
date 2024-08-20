@@ -31,9 +31,9 @@ const About: React.FC = () => {
   return (
     <div>
       <PageTitle title="About" />
-      <div className="grid sm:grid-col-2 m-4">
-        <div id="my-process" className="my-16 mx-auto grid sm:grid-col-1 gap-8">
-          <div className="font-bold text-2xl mx-auto text-center">
+      <div className="grid m-4 sm:grid-col-2">
+        <div id="my-process" className="grid gap-8 mx-auto my-16 sm:grid-col-1">
+          <div className="mx-auto text-2xl font-bold text-center">
             I Complete
             <br />
             Every Step Carefully
@@ -45,11 +45,11 @@ const About: React.FC = () => {
           </div>
           <br />
         </div>
-        <div id="procedure" className="mx-auto grid sm:grid-cols-3 gap-16">
+        <div id="procedure" className="grid gap-16 mx-auto sm:grid-cols-3">
           <AgileModel />
         </div>
-        <div id="breif" className="my-16 mx-auto grid sm:grid-col-1 gap-8">
-          <div className="font-bold text-2xl mx-auto text-center">
+        <div id="breif" className="grid gap-8 mx-auto my-16 sm:grid-col-1">
+          <div className="mx-auto text-2xl font-bold text-center">
             Digital Web Products for
             <br /> Amazing Clients
           </div>
@@ -60,7 +60,7 @@ const About: React.FC = () => {
             everything we do.
           </div>
         </div>
-        <div id="feedback" className="my-16 mx-auto grid gap-8 sm:grid-cols-3">
+        <div id="feedback" className="grid gap-8 mx-auto my-16 sm:grid-cols-3">
           {Feedback.map((item) => (
             <Flip
               title={item.title}
