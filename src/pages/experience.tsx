@@ -66,8 +66,8 @@ const Experience: React.FC = () => {
     <div>
       <PageTitle title="Experiences" />
       <div className="grid gap-4 p-4 m-4">
-        {experience.map((experience) => (
-          <div
+        {experience.map((experience,index) => (
+          <div key={index+1}
             className="grid gap-2 p-4 text-left rounded-lg shadow-lg sm:grid-cols-3 overflow bg-lightPrimary dark:bg-darkPrimary shadow-bal /40"
           >
             <div className="col-span-2 m-4">
@@ -84,8 +84,8 @@ const Experience: React.FC = () => {
               </div>
 
               <ul className="pt-2 text-left list-disc dark:text-lightTertiary text-darkTertiary line-clamp-3 hover:ml-2 hover:line-clamp-none lg:line-clamp-5">
-                {experience.description.map((line, i) => (
-                  <li key={i}>{line}</li>
+                {experience.description.map((line, index) => (
+                  <li key={index+1}>{line}</li>
                 ))}
               </ul>
             </div>
@@ -94,15 +94,15 @@ const Experience: React.FC = () => {
               <div className="text-xl font-bold">Technologies Used</div>
               <div className="py-2 text-left">
                 {experience.technologies.map((item, index) => (
-                  <Tag index={index} item={item} />
+                  <Tag key={index+1} item={item} />
                 ))}
               </div>
               <div className="mt-4 text-xl font-bold">
                 Achievements & Outcomes
               </div>
               <ul className="ml-4 text-left list-disc dark:text-lightTertiary text-darkTertiary">
-                {experience.outcomes.map((outcome, i) => (
-                  <li key={i}>{outcome}</li>
+                {experience.outcomes.map((outcome, index) => (
+                  <li key={index+1}>{outcome}</li>
                 ))}
               </ul>
             </div>

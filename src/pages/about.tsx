@@ -83,7 +83,7 @@ const About: React.FC = () => {
         <div id="feedback" className="grid gap-8 mx-auto my-16 sm:grid-cols-3">
           {Feedback.map((item,index) => (
             <Flip
-            key={index}
+            key={index+1}
               title={item.title}
               description={item.description}
               name={item.name}

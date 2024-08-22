@@ -7,7 +7,6 @@ export interface ServiceCardProps {
   subTitle?: string;
   text: string;
   link: string[];
-  rotate?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -24,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <p className="mb-2 text-base line-clamp-2">{text}</p>
         <div className="pr-6">
           {link.map((item, index) => (
-            <Tag index={index} item={item} />
+            <Tag key={index+1} item={item} />
           ))}
         </div>
         <div className="flex justify-end text-white">
