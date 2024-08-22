@@ -24,14 +24,11 @@ const MediumPosts: React.FC = () => {
         const cachedPosts = sessionStorage.getItem('mediumPosts');
         if (cachedPosts) {
           setPosts(JSON.parse(cachedPosts));
-          console.log("used Cashed data");
           setLoading(false);
           return;
         }
         else{
           const response = await axios.get(MEDIUM_FEED_URL);
-          console.log("api is hit");
-
         const fetchedPosts: MediumPost[] = response.data.items.map((item: MediumPost) => ({
           title: item.title,
           link: item.link,
@@ -72,7 +69,7 @@ const MediumPosts: React.FC = () => {
           </h2>
           <p className="text-sm text-gray-500">{post.pubDate}</p>
           <p className='bg-transparent overflow-y-clip line-clamp-1'>{post.categories.map((item,index) => (
-            <Tag key={index} item={item} />
+            <Tag key={index+10} item={item} />
           ))}</p>
           <p className='mb-2 text-base dark:text-lightPrimary text-darkPrimary line-clamp-6'> {post.description } </p>
         </div>
