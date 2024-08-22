@@ -43,7 +43,7 @@ const Content: React.FC<{
       </p>
       <div className="mb-8 text-left ">
         {technologies.map((item, index) => (
-          <Tag item={item} index={index} />
+          <Tag item={item} key={index+1} />
         ))}
       </div>
       <div className="text-right">

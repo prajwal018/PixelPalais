@@ -69,7 +69,7 @@ const MediumPosts: React.FC = () => {
           </h2>
           <p className="text-sm text-gray-500">{post.pubDate}</p>
           <p className='bg-transparent overflow-y-clip line-clamp-1'>{post.categories.map((item,index) => (
-            <Tag key={index+10} item={item} />
+            <Tag key={index+1} item={item} />
           ))}</p>
           <p className='mb-2 text-base dark:text-lightPrimary text-darkPrimary line-clamp-6'> {post.description } </p>
         </div>
