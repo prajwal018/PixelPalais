@@ -51,13 +51,13 @@ const AgileModel = () => {
   return (
     <>
       {agileProcess.map((step, index) => (
-        <div
+        <div key={index}
           className={`rounded-full p-8 bg-lightPrimary dark:bg-darkPrimary size-80 mx-auto`}
         >
           <div className="mb-2 text-xl font-bold">{step.title}</div>
           <div className="mb-2 font-semibold text-l">{step.subTitle}</div>
-          {step.link.map((item, index) => (
-            <Tag index={index} item={item} />
+          {step.link.map((item,index) => (
+            <Tag key={index} item={item} />
           ))}
           <p className="mb-2 text-base dark:text-lightPrimary text-darkPrimary line-clamp-2">
             {step.text}

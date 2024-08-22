@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Tag from './tag';
 
 interface MediumPost {
@@ -19,19 +20,29 @@ const MediumPosts: React.FC = () => {
   useEffect(() => {
     const fetchMediumPosts = async () => {
       try {
-        const response = await fetch(MEDIUM_FEED_URL);
-        if (!response.ok) {
-          throw new Error('Failed to fetch Medium posts');
+        // Check if posts are already cached in sessionStorage
+        const cachedPosts = sessionStorage.getItem('mediumPosts');
+        if (cachedPosts) {
+          setPosts(JSON.parse(cachedPosts));
+          console.log("used Cashed data");
+          setLoading(false);
+          return;
         }
-        const data = await response.json();
-        const fetchedPosts: MediumPost[] = data.items.map((item: MediumPost) => ({
+        else{
+          const response = await axios.get(MEDIUM_FEED_URL);
+          console.log("api is hit");
+
+        const fetchedPosts: MediumPost[] = response.data.items.map((item: MediumPost) => ({
           title: item.title,
           link: item.link,
           categories:item.categories,
           pubDate: new Date(item.pubDate).toDateString(),
           description: item.description.replace(/<\/?[^>]+(>|$)/g, ""),
         }));
-        setPosts(fetchedPosts);
+        // Cache the posts in sessionStorage
+        sessionStorage.setItem('mediumPosts', JSON.stringify(fetchedPosts));
+
+        setPosts(fetchedPosts);}
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An unknown error occurred');
       } finally {
@@ -60,8 +71,8 @@ const MediumPosts: React.FC = () => {
             </a>
           </h2>
           <p className="text-sm text-gray-500">{post.pubDate}</p>
-          <p className='bg-transparent overflow-y-clip line-clamp-1'>{post.categories.map((item, index) => (
-            <Tag index={index} item={item} />
+          <p className='bg-transparent overflow-y-clip line-clamp-1'>{post.categories.map((item,index) => (
+            <Tag key={index} item={item} />
           ))}</p>
           <p className='mb-2 text-base dark:text-lightPrimary text-darkPrimary line-clamp-6'> {post.description } </p>
         </div>
