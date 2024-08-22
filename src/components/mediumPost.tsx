@@ -24,14 +24,11 @@ const MediumPosts: React.FC = () => {
         const cachedPosts = sessionStorage.getItem('mediumPosts');
         if (cachedPosts) {
           setPosts(JSON.parse(cachedPosts));
-          console.log("used Cashed data");
           setLoading(false);
           return;
         }
         else{
           const response = await axios.get(MEDIUM_FEED_URL);
-          console.log("api is hit");
-
         const fetchedPosts: MediumPost[] = response.data.items.map((item: MediumPost) => ({
           title: item.title,
           link: item.link,
