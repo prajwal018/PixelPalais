@@ -55,7 +55,7 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <div className="grid grid-flow-col auto-cols-[500px] gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth p-4 no-scrollbar">
+    <div className="grid grid-flow-col auto-cols-[350px] md:auto-cols-[500px] gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth p-4 no-scrollbar">
           {projects.map((project,index) => (
             <ProjectWindow
               key={index+1}

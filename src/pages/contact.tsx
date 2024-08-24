@@ -1,9 +1,33 @@
 
 import React, { useState } from "react";
+import Flip, { FlipProps } from "../components/flip.tsx";
 
-import { toast } from "react-toastify";
 import PageTitle from "../components/page_title.tsx";
+import { toast } from "react-toastify";
 
+const Feedback: FlipProps[] = [
+  {
+    title: "Client",
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the caard's conte",
+    name: "Ronald Red",
+    profession: "UX Designer",
+  },
+  {
+    title: "Friends",
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the caard's conte",
+    name: "Ronald Yellow",
+    profession: "UX Designer",
+  },
+  {
+    title: "Co-worker",
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the caard's conte",
+    name: "Ronald Green",
+    profession: "UX Designer",
+  },
+];
 const Contact: React.FC = () => {
   const [status, setStatus] = useState("");
 
@@ -128,6 +152,20 @@ const Contact: React.FC = () => {
               {status && <p className="mt-4 text-sm text-gray-600">{status}</p>}
             </form>
           </div>
+        </div>
+        <div className="grid">
+        <h3 className="mx-auto text-2xl font-bold text-center">Feedback</h3>
+        <div id="feedback" className="grid gap-4 mx-auto my-8 sm:grid-cols-3">
+          {Feedback.map((item,index) => (
+            <Flip
+            key={index+1}
+              title={item.title}
+              description={item.description}
+              name={item.name}
+              profession={item.profession}
+            />
+          ))}
+        </div>
         </div>
       </div>
     </>

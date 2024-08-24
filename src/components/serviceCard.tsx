@@ -29,7 +29,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="flex justify-end text-white">
           <Button
             title="Learn More"
-            url="https://www.linkedin.com/in/prajwal018"
+            url="/skills"
           />
         </div>
       </div>

@@ -1,7 +1,5 @@
-import { BsEnvelopeFill, BsLink, BsTelephoneFill } from "react-icons/bs";
 import React from "react";
-import { Link } from "react-router-dom";
-import Button from "./button";
+import { BsEnvelopeFill, BsLink, BsTelephoneFill } from "react-icons/bs";
 
 const Footer: React.FC = () => {
   return (
@@ -48,9 +46,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <a className="flex justify-center " href="/contact">
-          <Link to="/contact">
-            <Button title="Hire Me" />
-          </Link>
+            <button className="px-4 py-2 rounded-full shadow-lg item-center bg-darkPrimary dark:bg-lightPrimary dark:text-darkPrimary text-lightPrimary shadow-gray-500/40">Hire Me</button>
         </a>
       </div>
       <div className="flex justify-end mx-auto text-sm">

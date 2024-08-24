@@ -1,31 +1,8 @@
 import React from "react";
 import Education from "../components/education.tsx";
-import Flip, { FlipProps } from "../components/flip.tsx";
 import PageTitle from "../components/page_title.tsx";
 
-const Feedback: FlipProps[] = [
-  {
-    title: "Client",
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the caard's conte",
-    name: "Ronald Red",
-    profession: "UX Designer",
-  },
-  {
-    title: "Friends",
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the caard's conte",
-    name: "Ronald Yellow",
-    profession: "UX Designer",
-  },
-  {
-    title: "Co-worker",
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the caard's conte",
-    name: "Ronald Green",
-    profession: "UX Designer",
-  },
-];
+
 
 const About: React.FC = () => {
   return (
@@ -49,18 +26,7 @@ const About: React.FC = () => {
       <h3 className="mx-auto text-2xl font-bold text-center">Education</h3>
         <Education/>
         
-        <h3 className="mx-auto text-2xl font-bold text-center">Feedback</h3>
-        <div id="feedback" className="grid gap-4 mx-auto my-8 sm:grid-cols-3">
-          {Feedback.map((item,index) => (
-            <Flip
-            key={index+1}
-              title={item.title}
-              description={item.description}
-              name={item.name}
-              profession={item.profession}
-            />
-          ))}
-        </div>
+        
     </div>
   );
 };
