@@ -18,7 +18,7 @@ const Navbar = () => {
 
       <div className="block lg:hidden">
         <button
-          className="flex items-center px-3 py-2 rounded text-darkPrimary dark:text-lightPrimary hover:opacity-60 "
+          className="flex items-center px-3 py-2 rounded lgded-full text-darkPrimary dark:text-lightPrimary focus:bg-lightSecondary dark:focus:bg-darkSecondary"
           onClick={toggleMenu}
         >
           <svg
@@ -40,31 +40,37 @@ const Navbar = () => {
         <div className="text-base text-md lg:flex-grow lg:justify-end lg:text-right">
           <Link
             to="/"
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary hover:opacity-60"
+            className="block px-2 mt-4 mr-4 rounded-lg lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary focus:bg-lightSecondary dark:focus:bg-darkSecondary"
           >
             Home
           </Link>
           <Link
+            to="/skills"
+            className="block px-2 mt-4 mr-4 rounded-lg lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary focus:bg-lightSecondary dark:focus:bg-darkSecondary"
+          >
+            Skills
+          </Link>
+          <Link
+            to="/blog"
+            className="block px-2 mt-4 mr-4 rounded-lg lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary focus:bg-lightSecondary dark:focus:bg-darkSecondary"
+          >
+            Blog
+          </Link>
+          <Link
+            to="/experience"
+            className="block px-2 mt-4 mr-4 rounded-lg lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary focus:bg-lightSecondary dark:focus:bg-darkSecondary"
+          >
+            Work
+          </Link>
+          <Link
             to="/about"
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary hover:opacity-60"
+            className="block px-2 mt-4 mr-4 rounded-lg lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary focus:bg-lightSecondary dark:focus:bg-darkSecondary"
           >
             About
           </Link>
           <Link
-            to="/experience"
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary hover:opacity-60"
-          >
-            Experience
-          </Link>
-          <Link
-            to="/projects"
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary hover:opacity-60"
-          >
-            Projects
-          </Link>
-          <Link
             to="/contact"
-            className="block mt-4 lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary hover:opacity-60 "
+            className="block px-2 mt-4 rounded-lg lg:inline-block lg:mt-0 text-darkPrimary dark:text-lightPrimary focus:bg-lightSecondary dark:focus:bg-darkSecondary"
           >
             Contact
           </Link>

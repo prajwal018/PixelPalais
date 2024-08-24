@@ -11,6 +11,8 @@ import "./App.css";
 import Experience from "./pages/experience.tsx";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { useState } from "react";
+import Skills from "./pages/skills.tsx";
+import Blog from "./pages/blog.tsx";
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -38,6 +40,8 @@ function App() {
           <main>
             <Routes>
               <Route path="/about" element={<About />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />

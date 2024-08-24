@@ -1,6 +1,7 @@
 import React from "react";
 import PageTitle from "../components/page_title.tsx";
 import Tag from "../components/tag.tsx";
+import Projects from "./projects.tsx";
 
 const experience = [
   {
@@ -63,12 +64,13 @@ const experience = [
 
 const Experience: React.FC = () => {
   return (
+    
     <div>
-      <PageTitle title="Experiences" />
+      <PageTitle title="Work" />
       <div className="grid gap-4 p-4 m-4">
         {experience.map((experience,index) => (
           <div key={index+1}
-            className="grid gap-2 p-4 text-left rounded-lg shadow-lg sm:grid-cols-3 overflow bg-lightPrimary dark:bg-darkPrimary shadow-bal /40"
+            className="grid gap-2 p-4 text-left border-dashed rounded-lg border-x border-y border-darkPrimary dark:border-lightPrimary sm:grid-cols-3 overflow bg-lightPrimary dark:bg-darkPrimary "
           >
             <div className="col-span-2 m-4">
               <div className="flex gap-4">
@@ -109,6 +111,7 @@ const Experience: React.FC = () => {
           </div>
         ))}
       </div>
+      <Projects/>
     </div>
   );
 };

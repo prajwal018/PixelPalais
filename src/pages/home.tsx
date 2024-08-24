@@ -16,7 +16,7 @@ const Services: ServiceCardProps[] = [
     link: ["java", "micro-service", "algorithms"],
   },
   {
-    title: "UI/UX Designer",
+    title: "UI/UX Design",
     text: "Designing intuitive and user-friendly interfaces for enhanced user experience.",
     link: ["figma", "testing", "adobe-xd"],
   },

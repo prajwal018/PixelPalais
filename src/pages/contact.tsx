@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import PageTitle from "../components/page_title.tsx";
 
 const Contact: React.FC = () => {
-  // const history = useHistory();
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {

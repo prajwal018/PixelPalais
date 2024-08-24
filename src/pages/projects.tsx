@@ -1,5 +1,4 @@
 import React from "react";
-import PageTitle from "../components/page_title.tsx";
 import { ProjectWindow } from "../components/projectWindow.tsx";
 
 const projects = [
@@ -56,13 +55,10 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <>
-      <div>
-        <PageTitle title="Projects" />
-
-        <div className="grid gap-8 p-4 m-4 sm:grid-cols-1 md:grid-cols-2">
-          {projects.map((project) => (
+    <div className="grid grid-flow-col auto-cols-[500px] gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth p-4 no-scrollbar">
+          {projects.map((project,index) => (
             <ProjectWindow
+              key={index+1}
               title={project.title}
               src={project.src}
               description={project.description}
@@ -71,8 +67,6 @@ const Projects: React.FC = () => {
             />
           ))}
         </div>
-      </div>
-    </>
   );
 };
 

@@ -61,7 +61,7 @@ export const ProjectWindow: React.FC<{
   technologies: string[];
 }> = ({ url, src, title, description, technologies }) => {
   return (
-    <div className="w-full rounded-b-lg h-max">
+    <div className="rounded-b-lg snap-center">
       <Header path={url} />
       <Thumbnail src={src} alt="Project Thumbnail" />
       <Content
