@@ -26,14 +26,14 @@ function App() {
         <ToastContainer />
         <div className="text-dark dark:text-lightSecondary dark:bg-dark bg-light ">
           <button
-            className="fixed right-0 z-10 block p-4 mt-4 rounded-l-lg top-20 lg:inline-block lg:mt-0 bg-darkTertiary dark:bg-lightTertiary md:p-6 text-darkPrimary dark:text-lightPrimary hover:opacity-70"
+            className="fixed z-10 block p-2 mt-4 text-3xl rounded-lg top-[85%] right-2 md:top-[15%] lg:inline-block lg:mt-0 bg-darkTertiary dark:bg-lightTertiary text-darkPrimary dark:text-lightPrimary opacity-70 hover:opacity-90"
             onClick={() => darkModeHandler()}
           >
             {
-              dark && <BsSunFill /> // render sunny when dark is true
+              !dark && <BsSunFill /> // render sunny when dark is true
             }
             {
-              !dark && <BsMoonFill /> // render moon when dark is false
+              dark && <BsMoonFill /> // render moon when dark is false
             }
           </button>
           <Navbar />
