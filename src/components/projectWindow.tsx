@@ -21,7 +21,7 @@ const Thumbnail: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
     <img
       src={src}
       alt={alt}
-      className="object-cover w-full size-32 border-x-2 border-lightSecondary dark:border-darkSecondary"
+      className="w-full max-h-56 border-x-2 border-lightSecondary dark:border-darkSecondary"
     />
   );
 };

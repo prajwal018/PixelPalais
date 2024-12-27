@@ -3,6 +3,30 @@ import { ProjectWindow } from '../components/projectWindow.tsx';
 
 let projects = [
   {
+    title: 'Amazon Clone',
+    url: 'https://prajwal018.github.io/javascript-amazon-project/',
+    description:
+      'The Amazon Clone is a dynamic web application designed to replicate the core features and functionalities of the Amazon e-commerce platform. The app features a user-friendly interface, allowing users to browse products, add items to their cart, and complete purchases. The Amazon Clone leverages the power of JavaScript and DayJS to deliver a seamless and responsive shopping experience.',
+    src: './amazon.jpg',
+    technologies: ['HTML', 'CSS', 'JS', 'DayJS'],
+  },
+  {
+    title: 'Portfolio Website',
+    url: 'https://pixel-palais.vercel.app',
+    description:
+      'The Personal Portfolio Website is a comprehensive and interactive platform designed to showcase my skills, projects, and professional journey as a software developer. The website serves as a digital resume, providing potential employers and collaborators with a detailed view of my capabilities and achievements.',
+    src: './portfolio.png',
+    technologies: ['React', 'Tailwind CSS'],
+  },
+  {
+    title: 'Creative Landing Page',
+    url: 'https://prajwal018.vercel.app/',
+    description:
+      "The Burnel Landing Page is a sleek and modern web interface designed to capture the essence of Burnel, a forward-thinking business dedicated to providing innovative solutions. The landing page serves as the digital gateway to Burnel’s offerings, effectively communicating the brand's value proposition and engaging potential customers from the first interaction.",
+    src: './brunel.png',
+    technologies: ['React', 'Material CSS'],
+  },
+  {
     title: 'Employee Management System',
     url: 'https://ems-sable.vercel.app/',
     description:
@@ -18,23 +42,6 @@ let projects = [
     src: './hikinglife.png',
     technologies: ['React', 'Bootstrap CSS'],
   },
-  {
-    title: 'Portfolio Website',
-    url: 'https://pixel-palais.vercel.app',
-    description:
-      'The Personal Portfolio Website is a comprehensive and interactive platform designed to showcase my skills, projects, and professional journey as a software developer. The website serves as a digital resume, providing potential employers and collaborators with a detailed view of my capabilities and achievements.',
-    src: 'https://i.pinimg.com/474x/16/fb/83/16fb83c7a6667f4cfbb256708f1cd51e.jpg',
-    technologies: ['React', 'Tailwind CSS'],
-  },
-  {
-    title: 'Creative Landing Page',
-    url: 'https://prajwal018.vercel.app/',
-    description:
-      "The Burnel Landing Page is a sleek and modern web interface designed to capture the essence of Burnel, a forward-thinking business dedicated to providing innovative solutions. The landing page serves as the digital gateway to Burnel’s offerings, effectively communicating the brand's value proposition and engaging potential customers from the first interaction.",
-    src: './brunel.png',
-    technologies: ['React', 'Material CSS'],
-  },
-
   {
     title: 'Safe Route',
     url: 'https://pixel-palais.vercel.app',
