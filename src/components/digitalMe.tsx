@@ -38,7 +38,7 @@ const DigitalMe: React.FC = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://www.instagram.com/prxjwxl.018/",
+                  "https://www.instagram.com/prajwalkuchewar/",
                   "_blank",
                   "noopener,noreferrer"
                 )
